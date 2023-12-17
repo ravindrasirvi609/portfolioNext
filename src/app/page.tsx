@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const SkillCard = ({ title, items }: { title: string, items: string[] }) => (
   <div className="p-4 border rounded-md shadow-md bg-sky-800">
