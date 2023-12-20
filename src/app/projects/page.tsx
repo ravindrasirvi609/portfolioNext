@@ -33,7 +33,7 @@ const ProjectDetails: React.FC = () => {
 
   // Sample projectsData - Replace with your actual data source
   const projectsData: Project[] = [
-    { id: 1, name: "operanr Next", description: "Description for Project " },
+    { id: 1, name: "operanr Next", description: "Pharma students and conference management system." },
     { id: 2, name: "Project 2", description: "Description for Project 2" },
     // Add more projects as needed
   ];
