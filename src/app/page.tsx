@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import { Button } from "@/components/ui/button";
 
 const SkillCard = ({ title, items }: { title: string; items: string[] }) => (
   <div className="p-4 border rounded-md shadow-md bg-sky-800">
@@ -155,8 +154,6 @@ export default function Home() {
           >
             Send Message
           </button>
-          <Button variant={"destructive"} className="bg-red">hello</Button>
-
         </form>
       </section>
     </main>
