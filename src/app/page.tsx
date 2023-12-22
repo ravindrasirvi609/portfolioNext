@@ -2,7 +2,7 @@ import Image from "next/image";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const SkillCard = ({ title, items }: { title: string; items: string[] }) => (
-  <div className="p-4 border rounded-md shadow-md bg-sky-800">
+  <div className="p-4 border rounded-md shadow-md bg-sky-500">
     <h3 className="text-xl font-bold mb-2">{title}</h3>
     <ul className="list-disc list-inside">
       {items.map((item, index) => (
@@ -19,7 +19,7 @@ const ProjectCard = ({
   title: string;
   description: string;
 }) => (
-  <div className="p-4 border rounded-md shadow-md bg-sky-800">
+  <div className="p-4 border rounded-md shadow-md bg-sky-500">
     <h3 className="text-xl font-bold mb-2">{title}</h3>
     <p>{description}</p>
   </div>
@@ -166,7 +166,7 @@ export default function Home() {
       <section className="mt-12">
         <h2 className="text-3xl font-bold text-sky-800 mb-4">Experience</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="p-4 border rounded-md shadow-md bg-sky-800">
+          <div className="p-4 border rounded-md shadow-md bg-sky-500">
             <h3 className="text-xl font-bold mb-2">Angular Developer</h3>
             <p className="text-gray-700 mb-2">June 2023 - Present</p>
             <p className="text-gray-700">
@@ -176,7 +176,7 @@ export default function Home() {
               | Ahemdabad, India
             </p>
           </div>
-          <div className="p-4 border rounded-md shadow-md bg-sky-800">
+          <div className="p-4 border rounded-md shadow-md bg-sky-500">
             <h3 className="text-xl font-bold mb-2">Solutions Developer</h3>
             <p className="text-gray-700 mb-2">November 2022 - May 2023</p>
             <p className="text-gray-700">
@@ -186,7 +186,7 @@ export default function Home() {
               | Pune, India
             </p>
           </div>
-          <div className="p-4 border rounded-md shadow-md bg-sky-800">
+          <div className="p-4 border rounded-md shadow-md bg-sky-500">
             <h3 className="text-xl font-bold mb-2">
               Solutions Developer Intern
             </h3>
@@ -205,7 +205,7 @@ export default function Home() {
       <section className="mt-12">
         <h2 className="text-3xl font-bold text-sky-800 mb-4">Education</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="p-4 border rounded-md shadow-md bg-sky-800">
+          <div className="p-4 border rounded-md shadow-md bg-sky-500">
             <h3 className="text-xl font-bold mb-2">
               Bachelor of Technology in Computer Science and Engineering
             </h3>
@@ -217,7 +217,7 @@ export default function Home() {
               | Vadodara, India
             </p>
           </div>
-          <div className="p-4 border rounded-md shadow-md bg-sky-800">
+          <div className="p-4 border rounded-md shadow-md bg-sky-500">
             <h3 className="text-xl font-bold mb-2">Higher Secondary School</h3>
             <p className="text-gray-700 mb-2">2018</p>
             <p className="text-gray-700">
@@ -234,13 +234,13 @@ export default function Home() {
       <section className="mt-12">
         <h2 className="text-3xl font-bold text-sky-800 mb-4">Certifications</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="p-4 border rounded-md shadow-md bg-sky-800">
+          <div className="p-4 border rounded-md shadow-md bg-sky-500">
             <h3 className="text-xl font-bold mb-2">
               Angular: The Complete Guide (2022 Edition)
             </h3>
             <p className="text-gray-700 mb-2">Udemy</p>
           </div>
-          <div className="p-4 border rounded-md shadow-md bg-sky-800">
+          <div className="p-4 border rounded-md shadow-md bg-sky-500">
             <h3 className="text-xl font-bold mb-2">
               The Complete 2022 Web Development Bootcamp
             </h3>
@@ -253,13 +253,13 @@ export default function Home() {
       <section className="mt-12">
         <h2 className="text-3xl font-bold text-sky-800 mb-4">Awards</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="p-4 border rounded-md shadow-md bg-sky-800">
+          <div className="p-4 border rounded-md shadow-md bg-sky-500">
             <h3 className="text-xl font-bold mb-2">
               1st Runner Up in Hackathon
             </h3>
             <p className="text-gray-700 mb-2">Parul University</p>
           </div>
-          <div className="p-4 border rounded-md shadow-md bg-sky-800">
+          <div className="p-4 border rounded-md shadow-md bg-sky-500">
             <h3 className="text-xl font-bold mb-2">
               1st Runner Up in Hackathon
             </h3>
