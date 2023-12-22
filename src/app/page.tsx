@@ -255,13 +255,13 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="p-4 border rounded-md shadow-md bg-sky-500">
             <h3 className="text-xl font-bold mb-2">
-              1st Runner Up in Hackathon
+              1st Runner Up in Hackathon for Web Development
             </h3>
             <p className="text-gray-700 mb-2">Parul University</p>
           </div>
           <div className="p-4 border rounded-md shadow-md bg-sky-500">
             <h3 className="text-xl font-bold mb-2">
-              1st Runner Up in Hackathon
+              2st Runner Up in Techno-Fest Events in inter-colleages
             </h3>
             <p className="text-gray-700 mb-2">Parul University</p>
           </div>
@@ -269,54 +269,60 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section className="mt-12">
-        <h2 className="text-3xl font-bold text-sky-800 mb-4">Contact</h2>
-        <form className="max-w-md mx-auto">
+      <section className="container mx-auto p-4 md:py-12 bg-sky-500 rounded-lg shadow-md mt-16">
+        <h2 className="text-2xl font-bold text-center mb-6 text-gray-800">
+          Contact
+        </h2>
+
+        <form className="max-w-md mx-auto px-4">
           <div className="mb-4">
             <label
-              className="block text-gray-700 text-sm font-bold mb-2"
               htmlFor="name"
+              className="block text-sm font-medium text-gray-700 mb-2"
             >
               Name
             </label>
             <input
-              className="input"
-              id="name"
               type="text"
+              id="name"
+              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               placeholder="Your Name"
             />
           </div>
+
           <div className="mb-4">
             <label
-              className="block text-gray-700 text-sm font-bold mb-2"
               htmlFor="email"
+              className="block text-sm font-medium text-gray-700 mb-2"
             >
               Email
             </label>
             <input
-              className="input"
-              id="email"
               type="email"
+              id="email"
+              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               placeholder="Your Email"
             />
           </div>
-          <div className="mb-4">
+
+          <div className="mb-6">
             <label
-              className="block text-gray-700 text-sm font-bold mb-2"
               htmlFor="message"
+              className="block text-sm font-medium text-gray-700 mb-2"
             >
               Message
             </label>
             <textarea
-              className="input"
               id="message"
-              rows={5}
+              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              rows={4}
               placeholder="Your Message"
             ></textarea>
           </div>
+
           <button
-            className="btn bg-red-400 rounded-3xl text-sky-800 font-bold py-2 px-4 hover:bg-red-800"
             type="button"
+            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
           >
             Send Message
           </button>
