@@ -79,17 +79,17 @@ export default function Home() {
   ];
 
   return (
-    <main className="flex flex-col items-center justify-center min-h-screen p-8 md:p-24 bg-gradient-to-br from-white via-gray-100 to-gray-200">
+    <main className="flex flex-col items-center justify-center min-h-screen p-8 md:p-24 bg-gradient-to-r from-slate-900 to-slate-800">
       {/* Hero Section */} 
       <div className="text-center">
-        <h1 className="font-bold text-4xl md:text-6xl mb-4 text-sky-800">
+        <h1 className="font-bold text-4xl md:text-6xl mb-4 text-sky-200">
           Welcome! I'm Ravindra,
         </h1>
-        <p className="text-lg md:text-xl text-gray-700">
+        <p className="text-lg md:text-xl text-sky-300">
           A seasoned full-stack developer passionate about creating digital
           solutions that make an impact. Let's embark on a coding adventure!
         </p>
-        <p className="text-lg md:text-xl text-gray-700 mt-4">
+        <p className="text-lg md:text-xl text-sky-400 mt-4">
           Innovate, Integrate, Inspire
         </p>
         {/* <p className="text-lg md:text-xl text-sky-800 mt-4">
@@ -106,7 +106,7 @@ export default function Home() {
 
       {/* About Section */}
       <section className="mt-12">
-        <h2 className="text-3xl font-bold text-sky-800 mb-4">About Me</h2>
+        <h2 className="text-3xl font-bold text-sky-200 mb-4">About Me</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="flex flex-col items-center justify-center">
             <Image
@@ -119,7 +119,7 @@ export default function Home() {
             />
           </div>
           <div>
-            <p className="text-lg md:text-xl text-gray-700">
+            <p className="text-lg md:text-xl text-sky-400">
               Highly motivated Computer Science and Engineering graduate with
               one year of professional experience as a Full Stack Developer.
               Possesses a strong understanding of web development principles,
@@ -130,7 +130,7 @@ export default function Home() {
               to continue expanding skills and knowledge in the eld of software
               development.
             </p>
-            <p className="text-lg md:text-xl text-gray-700 mt-4">
+            <p className="text-lg md:text-xl text-sky-400 mt-4">
               I have worked with clients from all over the world and I am
               passionate about learning new technologies and frameworks. I am
               currently looking for a full-time role in an innovative and
@@ -142,7 +142,7 @@ export default function Home() {
 
       {/* Skills Section */}
       <section className="mt-12">
-        <h2 className="text-3xl font-bold text-sky-800 mb-4">Skills</h2>
+        <h2 className="text-3xl font-bold text-sky-200 mb-4">Skills</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {skills.map((skill, index) => (
             <SkillCard key={index} {...skill} />
@@ -152,7 +152,7 @@ export default function Home() {
 
       {/* Projects Section */}
       <section className="mt-12">
-        <h2 className="text-3xl font-bold text-sky-800 mb-4">Projects</h2>
+        <h2 className="text-3xl font-bold text-sky-200 mb-4">Projects</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <ProjectCard key={index} {...project} />
@@ -162,7 +162,7 @@ export default function Home() {
 
       {/* Experience Section */}
       <section className="mt-12">
-        <h2 className="text-3xl font-bold text-sky-800 mb-4">Experience</h2>
+        <h2 className="text-3xl font-bold text-sky-200 mb-4">Experience</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="p-4 border rounded-md shadow-md bg-sky-500">
             <h3 className="text-xl font-bold mb-2">Angular Developer</h3>
@@ -201,7 +201,7 @@ export default function Home() {
 
       {/* Education Section */}
       <section className="mt-12">
-        <h2 className="text-3xl font-bold text-sky-800 mb-4">Education</h2>
+        <h2 className="text-3xl font-bold text-sky-200 mb-4">Education</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="p-4 border rounded-md shadow-md bg-sky-500">
             <h3 className="text-xl font-bold mb-2">
@@ -230,7 +230,7 @@ export default function Home() {
 
       {/* Certifications Section */}
       <section className="mt-12">
-        <h2 className="text-3xl font-bold text-sky-800 mb-4">Certifications</h2>
+        <h2 className="text-3xl font-bold text-sky-200 mb-4">Certifications</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="p-4 border rounded-md shadow-md bg-sky-500">
             <h3 className="text-xl font-bold mb-2">
@@ -249,7 +249,7 @@ export default function Home() {
 
       {/* Awards Section */}
       <section className="mt-12">
-        <h2 className="text-3xl font-bold text-sky-800 mb-4">Awards</h2>
+        <h2 className="text-3xl font-bold text-sky-200 mb-4">Awards</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="p-4 border rounded-md shadow-md bg-sky-500">
             <h3 className="text-xl font-bold mb-2">
