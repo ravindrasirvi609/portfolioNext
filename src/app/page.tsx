@@ -121,7 +121,7 @@ export default function Home() {
           <div>
             <p className="text-lg md:text-xl text-sky-400">
               Highly motivated Computer Science and Engineering graduate with
-              one year of professional experience as a Full Stack Developer.
+              two years of professional experience as a Full Stack Developer.
               Possesses a strong understanding of web development principles,
               with profciency in HTML, CSS, TypeScript, and ASP.NET Core.
               Skilled in designing and developing responsive web applications
