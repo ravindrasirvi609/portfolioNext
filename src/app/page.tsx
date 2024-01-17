@@ -58,6 +58,7 @@ export default function Home() {
         "Agile Methodologies",
         "CI/CD",
         "Docker",
+kubernates
       ],
     },
   ];
@@ -69,7 +70,7 @@ export default function Home() {
         "Implemented a comprehensive business risk management system, identifying, classifying, and assigning impact scores to enhance financial stability and operational efficiency. Achieved a 24% reduction in non-essential costs while prioritizing resources through total-cost analysis.",
     },
     {
-      title: "Social: Angular Social Media Web Application",
+      title: "Social:Social Media Web Application",
       description:
         "Crafted a dynamic social media app using Angular, enabling users to create, like, and comment on posts. The app also includes a real-time chat feature, fostering engaging interactions and seamless communication among users.",
     },
