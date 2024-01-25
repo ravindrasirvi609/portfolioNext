@@ -89,10 +89,17 @@ export default function Home() {
   return (
     <main className="flex flex-col items-center justify-center min-h-screen p-8 md:p-24 bg-gradient-to-r from-slate-900 to-slate-800">
       {/* Hero Section */}
+      <section className="my-48">
+          <div className="content text-justify">
+            <h2>Welcome!</h2>
+            <h2>Welcome!</h2>
+          </div>
+        </section>
       <div className="text-center">
-        <h1 className="font-bold text-4xl md:text-6xl mb-4 text-sky-200">
-          Welcome! I'm Ravindra,
+        <h1 className="font-bold text-4xl md:text-6xl my-12 text-sky-200">
+          I'm Ravindra,
         </h1>
+
         <p className="text-lg md:text-xl text-sky-300">
           A seasoned full-stack developer passionate about creating digital
           solutions that make an impact. Let's embark on a coding adventure!
