@@ -33,8 +33,8 @@ export default function Home() {
         "React.js",
         "Next.js",
         "HTML",
-"CSS", 
-"JavaScript",
+        "CSS",
+        "JavaScript",
         "Typescript",
         "Tailwind CSS",
         "Bootstrap",
@@ -58,7 +58,7 @@ export default function Home() {
         "Agile Methodologies",
         "CI/CD",
         "Docker",
-kubernates
+        "kubernates",
       ],
     },
   ];
@@ -75,15 +75,20 @@ kubernates
         "Crafted a dynamic social media app using Angular, enabling users to create, like, and comment on posts. The app also includes a real-time chat feature, fostering engaging interactions and seamless communication among users.",
     },
     {
-      title: "Pharma Event Registration Platform (Next.js 14)",
+      title: "Pharma Student Registration Platform (Next.js 14)",
       description:
         "Engineered a Next.js 14 project for Pharma Students and Conferences Registration. This platform ensures secure authentication, real-time updates, and responsiveness. Integrated payment gateways facilitate smooth transactions, offering an efficient solution for both students and conference organizers. Explore the firsthand experience through the project link.",
+    },
+    {
+      title: "Event Management (Next.js 14)",
+      description:
+        "Event Management Tools Used: Clerk Authentication, ShadCN UI, and Stripe Payment Gateway. With this application, organizations can create events, and users have the option to join these events, which may have optional prices.",
     },
   ];
 
   return (
     <main className="flex flex-col items-center justify-center min-h-screen p-8 md:p-24 bg-gradient-to-r from-slate-900 to-slate-800">
-      {/* Hero Section */} 
+      {/* Hero Section */}
       <div className="text-center">
         <h1 className="font-bold text-4xl md:text-6xl mb-4 text-sky-200">
           Welcome! I'm Ravindra,
@@ -108,9 +113,9 @@ kubernates
       </div>
 
       {/* About Section */}
-      <section className="mt-12">
-        <h2 className="text-3xl font-bold text-sky-200 mb-4">About Me</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <section className="mt-24">
+        <h2 className="text-3xl font-bold text-sky-200 mb-6">About Me</h2>
+        <div className=" grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="flex flex-col items-center justify-center">
             <Image
               src="/profile.jpg"
@@ -128,10 +133,10 @@ kubernates
               Possesses a strong understanding of web development principles,
               with profciency in HTML, CSS, TypeScript, and ASP.NET Core.
               Skilled in designing and developing responsive web applications
-              using Angular, as well as integrating APIs and optimizing web
-              performance. Committed to delivering high-quality work and eager
-              to continue expanding skills and knowledge in the eld of software
-              development.
+              using Angular and Next JS FrameWorks, as well as integrating APIs
+              and optimizing web performance. Committed to delivering
+              high-quality work and eager to continue expanding skills and
+              knowledge in the eld of software development.
             </p>
             <p className="text-lg md:text-xl text-sky-400 mt-4">
               I have worked with clients from all over the world and I am
@@ -144,7 +149,7 @@ kubernates
       </section>
 
       {/* Skills Section */}
-      <section className="mt-12">
+      <section className="mt-24">
         <h2 className="text-3xl font-bold text-sky-200 mb-4">Skills</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {skills.map((skill, index) => (
