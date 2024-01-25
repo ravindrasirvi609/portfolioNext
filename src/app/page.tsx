@@ -113,10 +113,10 @@ export default function Home() {
       </div>
 
       {/* About Section */}
-      <section className="mt-24">
+      <section className="mt-44">
         <h2 className="text-3xl font-bold text-sky-200 mb-6">About Me</h2>
         <div className=" grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="flex flex-col items-center justify-center">
+          <div className="flex flex-col items-center justify-center w-96 h-96">
             <Image
               src="/profile.jpg"
               alt="Ravindra"
@@ -131,12 +131,17 @@ export default function Home() {
               Highly motivated Computer Science and Engineering graduate with
               two years of professional experience as a Full Stack Developer.
               Possesses a strong understanding of web development principles,
-              with profciency in HTML, CSS, TypeScript, and ASP.NET Core.
+              with profciency in{" "}
+              <span className="text-sky-200">
+                HTML, CSS, TypeScript, JavaScript{" "}
+              </span>{" "}
+              and <span className="text-sky-200">ASP.NET Core.</span>
               Skilled in designing and developing responsive web applications
-              using Angular and Next JS FrameWorks, as well as integrating APIs
-              and optimizing web performance. Committed to delivering
-              high-quality work and eager to continue expanding skills and
-              knowledge in the eld of software development.
+              using <span className="text-sky-200">Angular</span> and{" "}
+              <span className="text-sky-200">Next JS</span> FrameWorks, as well
+              as integrating APIs and optimizing web performance. Committed to
+              delivering high-quality work and eager to continue expanding
+              skills and knowledge in the eld of software development.
             </p>
             <p className="text-lg md:text-xl text-sky-400 mt-4">
               I have worked with clients from all over the world and I am
