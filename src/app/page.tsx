@@ -47,6 +47,7 @@ export default function Home() {
         "Node.js",
         "Express.js",
         "Database Management (MongoDB, MySQL)",
+        "RESTful APIs",
       ],
     },
     {
