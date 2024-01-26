@@ -89,12 +89,17 @@ export default function Home() {
   return (
     <main className="flex flex-col items-center justify-center min-h-screen p-8 md:p-24 bg-gradient-to-r from-slate-900 to-slate-800">
       {/* Hero Section */}
-      <section className="my-48">
-          <div className="content text-justify">
-            <h2>Welcome!</h2>
-            <h2>Welcome!</h2>
-          </div>
-        </section>
+      <section className="my-8 lg:my-16 xl:my-24 flex flex-col lg:flex-row items-center justify-center">
+        <div className="content text-center lg:text-left">
+          <h2 className="text-2xl lg:text-4xl xl:text-5xl font-bold mb-4">
+            Welcome!
+          </h2>
+          <h2 className="text-2xl lg:text-4xl xl:text-5xl font-bold mb-4">
+            Welcome!
+          </h2>
+        </div>
+      </section>
+
       <div className="text-center">
         <h1 className="font-bold text-4xl md:text-6xl my-12 text-sky-200">
           I'm Ravindra,
