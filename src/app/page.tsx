@@ -87,18 +87,18 @@ export default function Home() {
   ];
 
   return (
-<main className="flex flex-col items-center justify-center min-h-screen p-8 md:p-24 bg-gradient-to-r from-slate-900 to-slate-800">
-  {/* Hero Section */}
-  <section className="my-8 lg:my-16 xl:my-24 flex flex-col lg:flex-row items-center justify-center">
-    <div className="content text-center lg:text-left">
-      <h2 className="text-base md:text-4xl xl:text-5xl font-bold mb-4">
-        Welcome!
-      </h2>
-      <h2 className="text-base md:text-4xl xl:text-5xl font-bold mb-4">
-        Welcome!
-      </h2>
-    </div>
-  </section>
+    <main className="flex flex-col items-center justify-center min-h-screen p-8 md:p-24 bg-gradient-to-r from-slate-900 to-slate-800">
+      {/* Hero Section */}
+      <section className="my-8 lg:my-16 xl:my-24 flex flex-col lg:flex-row items-center justify-center">
+        <div className="content text-center lg:text-left">
+          <h2 className="text-base md:text-4xl xl:text-5xl font-bold mb-4">
+            Welcome!
+          </h2>
+          <h2 className="text-base md:text-4xl xl:text-5xl font-bold mb-4">
+            Welcome!
+          </h2>
+        </div>
+      </section>
 
       <div className="text-center">
         <h1 className="font-bold text-4xl md:text-6xl my-12 text-sky-200">
@@ -127,8 +127,8 @@ export default function Home() {
       {/* About Section */}
       <section className="mt-44">
         <h2 className="text-3xl font-bold text-sky-200 mb-6">About Me</h2>
-        <div className=" grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="flex flex-col items-center justify-center w-96 h-96">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="flex flex-col items-center justify-center md:w-96 md:h-96">
             <Image
               src="/profile.jpg"
               alt="Ravindra"
@@ -138,24 +138,24 @@ export default function Home() {
               layout="responsive"
             />
           </div>
-          <div>
-            <p className="text-lg md:text-xl text-sky-400">
+          <div className="md:w-full text-center">
+            <p className="text-base md:text-xl lg:text-lg text-sky-400">
               Highly motivated Computer Science and Engineering graduate with
               two years of professional experience as a Full Stack Developer.
               Possesses a strong understanding of web development principles,
-              with profciency in{" "}
+              with proficiency in{" "}
               <span className="text-sky-200">
                 HTML, CSS, TypeScript, JavaScript{" "}
               </span>{" "}
-              and <span className="text-sky-200">ASP.NET Core.</span>
-              Skilled in designing and developing responsive web applications
-              using <span className="text-sky-200">Angular</span> and{" "}
-              <span className="text-sky-200">Next JS</span> FrameWorks, as well
+              and <span className="text-sky-200">ASP.NET Core.</span> Skilled in
+              designing and developing responsive web applications using{" "}
+              <span className="text-sky-200">Angular</span> and{" "}
+              <span className="text-sky-200">Next JS</span> Frameworks, as well
               as integrating APIs and optimizing web performance. Committed to
               delivering high-quality work and eager to continue expanding
-              skills and knowledge in the eld of software development.
+              skills and knowledge in the field of software development.
             </p>
-            <p className="text-lg md:text-xl text-sky-400 mt-4">
+            <p className="text-base md:text-xl lg:text-lg text-sky-400 mt-4">
               I have worked with clients from all over the world and I am
               passionate about learning new technologies and frameworks. I am
               currently looking for a full-time role in an innovative and

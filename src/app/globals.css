@@ -97,6 +97,6 @@ body {
 
 @media only screen and (max-width: 768px) {
   .content h2 {
-    font-size: 2em; /* Adjust the font size for smaller screens */
+    font-size: 4em; /* Adjust the font size for smaller screens */
   }
 }
