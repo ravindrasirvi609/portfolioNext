@@ -1,28 +1,8 @@
 import Image from "next/image";
-
-const SkillCard = ({ title, items }: { title: string; items: string[] }) => (
-  <div className="p-4 border rounded-md shadow-md bg-sky-500">
-    <h3 className="text-xl font-bold mb-2">{title}</h3>
-    <ul className="list-disc list-inside">
-      {items.map((item, index) => (
-        <li key={index}>{item}</li>
-      ))}
-    </ul>
-  </div>
-);
-
-const ProjectCard = ({
-  title,
-  description,
-}: {
-  title: string;
-  description: string;
-}) => (
-  <div className="p-4 border rounded-md shadow-md bg-sky-500">
-    <h3 className="text-xl font-bold mb-2">{title}</h3>
-    <p>{description}</p>
-  </div>
-);
+import { SkillCard } from "../../components/skillcard";
+import { ProjectCard } from "../../components/projectcard";
+import Experience from "../../components/exprience";
+import Education from "../../components/education";
 
 export default function Home() {
   const skills = [
@@ -187,72 +167,10 @@ export default function Home() {
       </section>
 
       {/* Experience Section */}
-      <section className="mt-12">
-        <h2 className="text-3xl font-bold text-sky-200 mb-4">Experience</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="p-4 border rounded-md shadow-md bg-sky-500">
-            <h3 className="text-xl font-bold mb-2">Angular Developer</h3>
-            <p className="text-gray-700 mb-2">June 2023 - Present</p>
-            <p className="text-gray-700">
-              <a href="#" className="underline">
-                Samcom
-              </a>{" "}
-              | Ahemdabad, India
-            </p>
-          </div>
-          <div className="p-4 border rounded-md shadow-md bg-sky-500">
-            <h3 className="text-xl font-bold mb-2">Solutions Developer</h3>
-            <p className="text-gray-700 mb-2">November 2022 - May 2023</p>
-            <p className="text-gray-700">
-              <a href="#" className="underline">
-                Quadwave Consulting pvt. ltd.
-              </a>{" "}
-              | Pune, India
-            </p>
-          </div>
-          <div className="p-4 border rounded-md shadow-md bg-sky-500">
-            <h3 className="text-xl font-bold mb-2">
-              Solutions Developer Intern
-            </h3>
-            <p className="text-gray-700 mb-2">April 2022 - Octomber 2022</p>
-            <p className="text-gray-700">
-              <a href="#" className="underline">
-                Quadwave Consulting pvt. ltd.
-              </a>{" "}
-              | Pune, India
-            </p>
-          </div>
-        </div>
-      </section>
+      <Experience />
 
       {/* Education Section */}
-      <section className="mt-12">
-        <h2 className="text-3xl font-bold text-sky-200 mb-4">Education</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="p-4 border rounded-md shadow-md bg-sky-500">
-            <h3 className="text-xl font-bold mb-2">
-              Bachelor of Technology in Computer Science and Engineering
-            </h3>
-            <p className="text-gray-700 mb-2">2019 - 2023</p>
-            <p className="text-gray-700">
-              <a href="#" className="underline">
-                Parul University
-              </a>{" "}
-              | Vadodara, India
-            </p>
-          </div>
-          <div className="p-4 border rounded-md shadow-md bg-sky-500">
-            <h3 className="text-xl font-bold mb-2">Higher Secondary School</h3>
-            <p className="text-gray-700 mb-2">2018</p>
-            <p className="text-gray-700">
-              <a href="#" className="underline">
-                Rajsthan Board of Secondary Education
-              </a>{" "}
-              | Jodhpur, India
-            </p>
-          </div>
-        </div>
-      </section>
+      <Education />
 
       {/* Certifications Section */}
       <section className="mt-12">
