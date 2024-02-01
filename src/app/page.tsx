@@ -93,7 +93,7 @@ export default function Home() {
         <p className="text-lg md:text-xl text-sky-400 mt-4">
           Innovate, Integrate, Inspire
         </p>
-        {/* <p className="text-lg md:text-xl text-sky-800 mt-4">
+        <p className="text-lg md:text-xl text-sky-800 mt-4">
           <a href="#" className="underline">
             Discover my projects
           </a>{" "}
@@ -102,7 +102,7 @@ export default function Home() {
             get in touch
           </a>{" "}
           to discuss your unique ideas.
-        </p> */}
+        </p> 
       </div>
 
       {/* About Section */}
