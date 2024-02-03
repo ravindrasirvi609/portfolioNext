@@ -17,7 +17,7 @@ export default function Home() {
         "JavaScript",
         "Typescript",
         "Tailwind CSS",
-        "Bootstrap",
+        "Bootstrap"
       ],
     },
     {
@@ -27,7 +27,7 @@ export default function Home() {
         "Node.js",
         "Express.js",
         "Database Management (MongoDB, MySQL)",
-        "RESTful APIs",
+        "RESTful APIs"
       ],
     },
     {
@@ -39,7 +39,7 @@ export default function Home() {
         "Agile Methodologies",
         "CI/CD",
         "Docker",
-        "kubernates",
+        "kubernates"
       ],
     },
   ];
