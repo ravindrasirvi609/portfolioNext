@@ -16,7 +16,7 @@ const Education: React.FC<EducationProps> = () => {
             </h3>
             <p className="text-gray-700 mb-2">2019 - 2023</p>
             <p className="text-gray-700">
-              <a href="#" className="underline">
+              <a href="https://paruluniversity.ac.in/" className="underline">
                 Parul University
               </a>{" "}
               | Vadodara, India
@@ -26,7 +26,10 @@ const Education: React.FC<EducationProps> = () => {
             <h3 className="text-xl font-bold mb-2">Higher Secondary School</h3>
             <p className="text-gray-700 mb-2">2018</p>
             <p className="text-gray-700">
-              <a href="#" className="underline">
+              <a
+                href="https://rajeduboard.rajasthan.gov.in/"
+                className="underline"
+              >
                 Rajsthan Board of Secondary Education
               </a>{" "}
               | Jodhpur, India

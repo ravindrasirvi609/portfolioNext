@@ -24,7 +24,7 @@ const Experience: React.FC<ExperienceProps> = () => {
             <h3 className="text-xl font-bold mb-2">Solutions Developer</h3>
             <p className="text-gray-700 mb-2">November 2022 - May 2023</p>
             <p className="text-gray-700">
-              <a href="#" className="underline">
+              <a href="https://quadwave.com/" className="underline">
                 Quadwave Consulting pvt. ltd.
               </a>{" "}
               | Pune, India
@@ -36,7 +36,7 @@ const Experience: React.FC<ExperienceProps> = () => {
             </h3>
             <p className="text-gray-700 mb-2">April 2022 - Octomber 2022</p>
             <p className="text-gray-700">
-              <a href="#" className="underline">
+              <a href="https://quadwave.com/" className="underline">
                 Quadwave Consulting pvt. ltd.
               </a>{" "}
               | Pune, India
