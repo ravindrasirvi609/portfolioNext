@@ -5,6 +5,7 @@ import Experience from "../../components/exprience";
 import Education from "../../components/education";
 import Certification from "../../components/certification";
 import Awards from "../../components/award";
+import Contact from "../../components/contact";
 
 export default function Home() {
   const skills = [
@@ -19,7 +20,7 @@ export default function Home() {
         "JavaScript",
         "Typescript",
         "Tailwind CSS",
-        "Bootstrap"
+        "Bootstrap",
       ],
     },
     {
@@ -29,7 +30,7 @@ export default function Home() {
         "Node.js",
         "Express.js",
         "Database Management (MongoDB, MySQL)",
-        "RESTful APIs"
+        "RESTful APIs",
       ],
     },
     {
@@ -41,7 +42,7 @@ export default function Home() {
         "Agile Methodologies",
         "CI/CD",
         "Docker",
-        "kubernates"
+        "kubernates",
       ],
     },
   ];
@@ -104,7 +105,7 @@ export default function Home() {
             get in touch
           </a>{" "}
           to discuss your unique ideas.
-        </p> 
+        </p>
       </div>
 
       {/* About Section */}
@@ -181,65 +182,7 @@ export default function Home() {
       <Awards />
 
       {/* Contact Section */}
-      <section className="container mx-auto p-4 md:py-12 bg-sky-500 rounded-lg shadow-md mt-16">
-        <h2 className="text-2xl font-bold text-center mb-6 text-gray-800">
-          Contact
-        </h2>
-
-        <form className="max-w-md mx-auto px-4">
-          <div className="mb-4">
-            <label
-              htmlFor="name"
-              className="block text-sm font-medium text-gray-700 mb-2"
-            >
-              Name
-            </label>
-            <input
-              type="text"
-              id="name"
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              placeholder="Your Name"
-            />
-          </div>
-
-          <div className="mb-4">
-            <label
-              htmlFor="email"
-              className="block text-sm font-medium text-gray-700 mb-2"
-            >
-              Email
-            </label>
-            <input
-              type="email"
-              id="email"
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              placeholder="Your Email"
-            />
-          </div>
-
-          <div className="mb-6">
-            <label
-              htmlFor="message"
-              className="block text-sm font-medium text-gray-700 mb-2"
-            >
-              Message
-            </label>
-            <textarea
-              id="message"
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              rows={4}
-              placeholder="Your Message"
-            ></textarea>
-          </div>
-
-          <button
-            type="button"
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-          >
-            Send Message
-          </button>
-        </form>
-      </section>
+      <Contact />
     </main>
   );
 }
