@@ -149,6 +149,93 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Tech Stack Section */}
+
+      <section className="mt-24">
+        <h2 className="text-3xl font-bold text-sky-200 mb-4">Tech Stack</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-8">
+          <div className="flex flex-wrap justify-center items-center">
+            <Image
+              src={"/assets/angular-new.png"}
+              alt={""}
+              width={100}
+              height={100}
+              className="m-4"
+            />
+            <Image
+              src={"/assets/React-icon.svg.png"}
+              alt={""}
+              width={100}
+              height={100}
+              className="m-4"
+            />
+            <Image
+              src={"/assets/next-js.svg"}
+              alt={""}
+              width={100}
+              height={100}
+              className="m-4"
+            />
+            <Image
+              src={"/assets/JavaScript-logo.png"}
+              alt={""}
+              width={100}
+              height={100}
+              className="m-4"
+            />
+            <Image
+              src={"/assets/Typescript_logo_2020.svg.png"}
+              alt={""}
+              width={100}
+              height={100}
+              className="m-4"
+            />
+            <Image
+              src={"/assets/Tailwind_CSS_Logo.svg.png"}
+              alt={""}
+              width={100}
+              height={100}
+              className="m-4"
+            />
+            <Image
+              src={"/assets/Bootstrap_logo.svg.png"}
+              alt={""}
+              width={100}
+              height={100}
+              className="m-4"
+            />
+
+            <Image
+              src={"/assets/netcore.png"}
+              alt={""}
+              width={200}
+              height={200}
+              className="m-4"
+            />
+            <Image
+              src={"/assets/node.png"}
+              alt={""}
+              width={200}
+              height={200}
+              className="m-4"
+            />
+            <Image
+              src={"/assets/MongoDB-Logo.png"}
+              alt={""}
+              width={200}
+              height={200}
+              className="m-4"
+            />
+            <Image
+              src={"/assets/mysql.png"}
+              alt={""}
+              width={200}
+              height={200}
+              className="m-4"
+            />
+          </div>
+        </div>
+      </section>
       {/* Skills Section */}
       <section className="mt-24">
         <h2 className="text-3xl font-bold text-sky-200 mb-4">Skills</h2>
