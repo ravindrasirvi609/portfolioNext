@@ -213,7 +213,7 @@ export default function Home() {
               className="m-4"
             />
             <Image
-              src={"/assets/node.png"}
+              src={"/assets/Node.png"}
               alt={""}
               width={200}
               height={200}
