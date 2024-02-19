@@ -83,7 +83,6 @@ export default function Home() {
           </h2>
         </div>
       </section>
-
       <div className="text-center">
         <h1 className="font-bold text-4xl md:text-6xl my-12 text-sky-200">
           I'm Ravindra,
@@ -96,7 +95,7 @@ export default function Home() {
         <p className="text-lg md:text-xl text-sky-400 mt-4">
           Innovate, Integrate, Inspire
         </p>
-        <p className="text-lg md:text-xl text-sky-800 mt-4">
+        {/* <p className="text-lg md:text-xl text-sky-800 mt-4">
           <a href="#" className="underline">
             Discover my projects
           </a>{" "}
@@ -105,9 +104,8 @@ export default function Home() {
             get in touch
           </a>{" "}
           to discuss your unique ideas.
-        </p>
+        </p> */}
       </div>
-
       {/* About Section */}
       <section className="mt-44">
         <h2 className="text-3xl font-bold text-sky-200 mb-6">About Me</h2>
@@ -119,7 +117,6 @@ export default function Home() {
               width={300}
               height={300}
               className="rounded-full"
-              layout="responsive"
             />
           </div>
           <div className="md:w-full text-center">
@@ -148,9 +145,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* Tech Stack Section */}
-
       <section className="mt-24">
         <h2 className="text-3xl font-bold text-sky-200 mb-4">Tech Stack</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-8">
@@ -213,7 +208,7 @@ export default function Home() {
               className="m-4"
             />
             <Image
-              src={"/assets/Node.png"}
+              src={"/assets/node.png"}
               alt={""}
               width={200}
               height={200}
@@ -240,12 +235,19 @@ export default function Home() {
       <section className="mt-24">
         <h2 className="text-3xl font-bold text-sky-200 mb-4">Skills</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {skills.map((skill, index) => (
-            <SkillCard key={index} {...skill} />
+          {skills.map(({ title, items }) => (
+            // <SkillCard key={index} {...skill} />
+            <div className="p-4 border rounded-md shadow-md bg-sky-500">
+              <h3 className="text-xl font-bold text-black mb-2">{title}</h3>
+              <ul className="list-disc list-inside">
+                {items.map((item, index) => (
+                  <li key={index}>{item}</li>
+                ))}
+              </ul>
+            </div>
           ))}
         </div>
       </section>
-
       {/* Projects Section */}
       <section className="mt-12">
         <h2 className="text-3xl font-bold text-sky-200 mb-4">Projects</h2>
@@ -255,21 +257,74 @@ export default function Home() {
           ))}
         </div>
       </section>
-
       {/* Experience Section */}
       <Experience />
-
       {/* Education Section */}
       <Education />
-
       {/* Certifications Section */}
       <Certification />
-
       {/* Awards Section */}
       <Awards />
-
       {/* Contact Section */}
-      <Contact />
+      <section className="container mx-auto p-4 md:py-12 bg-sky-500 rounded-lg shadow-md mt-16">
+        <h2 className="text-2xl font-bold text-center mb-6 text-gray-800">
+          Contact
+        </h2>
+
+        <form className="max-w-md mx-auto px-4">
+          <div className="mb-4">
+            <label
+              htmlFor="name"
+              className="block text-sm font-medium text-gray-700 mb-2"
+            >
+              Name
+            </label>
+            <input
+              type="text"
+              id="name"
+              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              placeholder="Your Name"
+            />
+          </div>
+
+          <div className="mb-4">
+            <label
+              htmlFor="email"
+              className="block text-sm font-medium text-gray-700 mb-2"
+            >
+              Email
+            </label>
+            <input
+              type="email"
+              id="email"
+              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              placeholder="Your Email"
+            />
+          </div>
+
+          <div className="mb-6">
+            <label
+              htmlFor="message"
+              className="block text-sm font-medium text-gray-700 mb-2"
+            >
+              Message
+            </label>
+            <textarea
+              id="message"
+              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              rows={4}
+              placeholder="Your Message"
+            ></textarea>
+          </div>
+
+          <button
+            type="button"
+            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+          >
+            Send Message
+          </button>
+        </form>
+      </section>{" "}
     </main>
   );
 }
