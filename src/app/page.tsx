@@ -1,13 +1,54 @@
+"use client";
 import Image from "next/image";
-import { SkillCard } from "../../components/skillcard";
 import { ProjectCard } from "../../components/projectcard";
 import Experience from "../../components/exprience";
 import Education from "../../components/education";
 import Certification from "../../components/certification";
 import Awards from "../../components/award";
-import Contact from "../../components/contact";
+import { useEffect } from "react";
 
 export default function Home() {
+  useEffect(() => {
+    // Get the section element by its ID
+    const section = document.getElementById("rainbow-section");
+
+    // Function to check if the section is in the viewport
+    function isInViewport(element: HTMLElement | null) {
+      if (element) {
+        const rect = element.getBoundingClientRect();
+        return (
+          rect.top >= 0 &&
+          rect.bottom <=
+            (window.innerHeight || document.documentElement.clientHeight)
+        );
+      }
+      return false;
+    }
+
+    // Function to handle the scroll event
+    function handleScroll() {
+      if (section && isInViewport(section)) {
+        section.classList.add("rainbow-background");
+        section.style.opacity = "1";
+      } else if (section){
+        section.classList.remove("rainbow-background");
+        section.style.opacity = "0";
+      }
+    }
+
+    // Add the scroll event listener
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", handleScroll);
+    }
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      if (typeof window !== "undefined") {
+        window.removeEventListener("scroll", handleScroll);
+      }
+    };
+  }, []);
+
   const skills = [
     {
       title: "Frontend Development",
@@ -84,7 +125,10 @@ export default function Home() {
         </div>
       </section>
       <div className="text-center">
-        <h1 className="font-bold text-4xl md:text-6xl my-12 text-sky-200">
+        <h1
+          className="font-bold text-4xl md:text-6xl my-12 text-sky-200"
+          id="rainbow-section"
+        >
           I'm Ravindra,
         </h1>
 
@@ -92,9 +136,10 @@ export default function Home() {
           A seasoned full-stack developer passionate about creating digital
           solutions that make an impact. Let's embark on a coding adventure!
         </p>
-        <p className="text-lg md:text-xl text-sky-400 mt-4">
+        <p className="text-xl md:text-2xl text-sky-400 font-bold mt-4">
           Innovate, Integrate, Inspire
         </p>
+
         {/* <p className="text-lg md:text-xl text-sky-800 mt-4">
           <a href="#" className="underline">
             Discover my projects
@@ -124,7 +169,10 @@ export default function Home() {
             </p>
           </div>
           <div className="md:w-full text-center">
-            <p className="text-base md:text-xl lg:text-lg text-sky-400">
+            <p
+              id="rainbow-section"
+              className="text-base md:text-xl lg:text-lg text-sky-400"
+            >
               Highly motivated Computer Science and Engineering graduate with
               two years of professional experience as a Full Stack Developer.
               Possesses a strong understanding of web development principles,

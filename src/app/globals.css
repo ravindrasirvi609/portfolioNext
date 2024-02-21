@@ -100,3 +100,25 @@ body {
     font-size: 4em; /* Adjust the font size for smaller screens */
   }
 }
+
+.rainbow-background {
+  animation: rainbowAnimation 32s infinite;
+  transition: opacity 4s;
+  border-radius: 30px;
+}
+
+@keyframes rainbowAnimation {
+  0% {
+    background-color: red;
+  }
+  33% {
+    background-color: orange;
+  }
+  66% {
+    background-color: yellow;
+  }
+  100% {
+    background-color: green;
+  }
+
+}
