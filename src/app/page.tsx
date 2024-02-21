@@ -118,6 +118,10 @@ export default function Home() {
               height={300}
               className="rounded-full"
             />
+            <h3 className="text-xl font-bold text-sky-200 mt-4">Ravindra</h3>
+            <p className="text-base md:text-xl lg:text-lg text-sky-400">
+              Full Stack Developer
+            </p>
           </div>
           <div className="md:w-full text-center">
             <p className="text-base md:text-xl lg:text-lg text-sky-400">
