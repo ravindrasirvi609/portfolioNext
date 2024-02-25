@@ -6,6 +6,7 @@ import Education from "../components/education";
 import Certification from "../components/certification";
 import Awards from "../components/award";
 import { useEffect } from "react";
+import { ThreeDCardDemo } from "@/components/tech-card";
 
 export default function Home() {
   useEffect(() => {
@@ -30,7 +31,7 @@ export default function Home() {
       if (section && isInViewport(section)) {
         section.classList.add("rainbow-background");
         section.style.opacity = "1";
-      } else if (section){
+      } else if (section) {
         section.classList.remove("rainbow-background");
         section.style.opacity = "0";
       }
@@ -202,7 +203,13 @@ export default function Home() {
         <h2 className="text-3xl font-bold text-sky-200 mb-4">Tech Stack</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-8">
           <div className="flex flex-wrap justify-center items-center">
-            <Image
+            <div
+              className="py-20 flex items-center justify-center"
+            >
+              <ThreeDCardDemo />
+            </div>
+
+            {/* <Image
               src={"/assets/angular-new.png"}
               alt={""}
               width={100}
@@ -279,7 +286,7 @@ export default function Home() {
               width={200}
               height={200}
               className="m-4"
-            />
+            /> */}
           </div>
         </div>
       </section>
