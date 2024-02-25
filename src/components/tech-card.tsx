@@ -11,8 +11,8 @@ export function ThreeDCardDemo() {
       <div className="flex flex-wrap">
         {filePaths.map((path, index) => (
           <CardContainer className="inter-var" key={index}>
-            <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-90 rounded-xl p-6 border m-10 " >
-              <CardItem translateZ="100" className="w-full mt-4" >
+            <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[11rem] h-90 rounded-xl p-6 border m-8 ">
+              <CardItem translateZ="100" className="w-150 mt-4">
                 <Image
                   src={path}
                   height="150"

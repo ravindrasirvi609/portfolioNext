@@ -204,89 +204,11 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-8">
           <div className="flex flex-wrap justify-center items-center">
             <div
-              className="py-20 flex items-center justify-center"
+              className="flex items-center justify-center"
             >
               <ThreeDCardDemo />
             </div>
 
-            {/* <Image
-              src={"/assets/angular-new.png"}
-              alt={""}
-              width={100}
-              height={100}
-              className="m-4"
-            />
-            <Image
-              src={"/assets/React-icon.svg.png"}
-              alt={""}
-              width={100}
-              height={100}
-              className="m-4"
-            />
-            <Image
-              src={"/assets/next-js.svg"}
-              alt={""}
-              width={100}
-              height={100}
-              className="m-4"
-            />
-            <Image
-              src={"/assets/JavaScript-logo.png"}
-              alt={""}
-              width={100}
-              height={100}
-              className="m-4"
-            />
-            <Image
-              src={"/assets/Typescript_logo_2020.svg.png"}
-              alt={""}
-              width={100}
-              height={100}
-              className="m-4"
-            />
-            <Image
-              src={"/assets/Tailwind_CSS_Logo.svg.png"}
-              alt={""}
-              width={100}
-              height={100}
-              className="m-4"
-            />
-            <Image
-              src={"/assets/Bootstrap_logo.svg.png"}
-              alt={""}
-              width={100}
-              height={100}
-              className="m-4"
-            />
-
-            <Image
-              src={"/assets/netcore.png"}
-              alt={""}
-              width={200}
-              height={200}
-              className="m-4"
-            />
-            <Image
-              src={"/assets/Node.png"}
-              alt={""}
-              width={200}
-              height={200}
-              className="m-4"
-            />
-            <Image
-              src={"/assets/MongoDB-Logo.png"}
-              alt={""}
-              width={200}
-              height={200}
-              className="m-4"
-            />
-            <Image
-              src={"/assets/mysql.png"}
-              alt={""}
-              width={200}
-              height={200}
-              className="m-4"
-            /> */}
           </div>
         </div>
       </section>
