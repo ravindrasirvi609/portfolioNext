@@ -7,6 +7,7 @@ import Certification from "../components/certification";
 import Awards from "../components/award";
 import { ThreeDCardDemo } from "@/components/tech-card";
 import { SparklesPreview } from "@/components/spark";
+import { TypewriterEffectSmoothDemo } from "@/components/typewriter-effect";
 
 export default function Home() {
   const skills = [
@@ -88,14 +89,8 @@ export default function Home() {
         <h1 className="font-bold text-4xl md:text-6xl my-12 text-sky-200">
           <SparklesPreview />
         </h1>
-        
-        <p className="text-lg md:text-xl text-sky-300">
-          A seasoned full-stack developer passionate about creating digital
-          solutions that make an impact. Let's embark on a coding adventure!
-        </p>
-        <p className="text-xl md:text-2xl text-sky-400 font-bold mt-4">
-          Innovate, Integrate, Inspire
-        </p>
+
+        <TypewriterEffectSmoothDemo />
 
         {/* <p className="text-lg md:text-xl text-sky-800 mt-4">
           <a href="#" className="underline">
