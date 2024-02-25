@@ -1,10 +1,10 @@
 "use client";
 import Image from "next/image";
-import { ProjectCard } from "../../components/projectcard";
-import Experience from "../../components/exprience";
-import Education from "../../components/education";
-import Certification from "../../components/certification";
-import Awards from "../../components/award";
+import { ProjectCard } from "../components/projectcard";
+import Experience from "../components/exprience";
+import Education from "../components/education";
+import Certification from "../components/certification";
+import Awards from "../components/award";
 import { useEffect } from "react";
 
 export default function Home() {
