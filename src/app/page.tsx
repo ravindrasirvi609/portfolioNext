@@ -5,51 +5,10 @@ import Experience from "../components/exprience";
 import Education from "../components/education";
 import Certification from "../components/certification";
 import Awards from "../components/award";
-import { useEffect } from "react";
 import { ThreeDCardDemo } from "@/components/tech-card";
+import { SparklesPreview } from "@/components/spark";
 
 export default function Home() {
-  useEffect(() => {
-    // Get the section element by its ID
-    const section = document.getElementById("rainbow-section");
-
-    // Function to check if the section is in the viewport
-    function isInViewport(element: HTMLElement | null) {
-      if (element) {
-        const rect = element.getBoundingClientRect();
-        return (
-          rect.top >= 0 &&
-          rect.bottom <=
-            (window.innerHeight || document.documentElement.clientHeight)
-        );
-      }
-      return false;
-    }
-
-    // Function to handle the scroll event
-    function handleScroll() {
-      if (section && isInViewport(section)) {
-        section.classList.add("rainbow-background");
-        section.style.opacity = "1";
-      } else if (section) {
-        section.classList.remove("rainbow-background");
-        section.style.opacity = "0";
-      }
-    }
-
-    // Add the scroll event listener
-    if (typeof window !== "undefined") {
-      window.addEventListener("scroll", handleScroll);
-    }
-
-    // Clean up the event listener when the component unmounts
-    return () => {
-      if (typeof window !== "undefined") {
-        window.removeEventListener("scroll", handleScroll);
-      }
-    };
-  }, []);
-
   const skills = [
     {
       title: "Frontend Development",
@@ -113,8 +72,8 @@ export default function Home() {
   ];
 
   return (
-    <main className="flex flex-col items-center justify-center min-h-screen p-8 md:p-24 bg-gradient-to-r from-slate-900 to-slate-800">
-      {/* Hero Section */}
+    <main className="flex flex-col items-center justify-center min-h-screen p-8 md:p-24 bg-slate-900">
+                    {/* Hero Section */}
       <section className="my-8 lg:my-16 xl:my-24 flex flex-col lg:flex-row items-center justify-center">
         <div className="content text-center lg:text-left">
           <h2 className="text-base md:text-4xl xl:text-5xl font-bold mb-4">
@@ -126,13 +85,10 @@ export default function Home() {
         </div>
       </section>
       <div className="text-center">
-        <h1
-          className="font-bold text-4xl md:text-6xl my-12 text-sky-200"
-          id="rainbow-section"
-        >
-          I'm Ravindra,
+        <h1 className="font-bold text-4xl md:text-6xl my-12 text-sky-200">
+          <SparklesPreview />
         </h1>
-
+        
         <p className="text-lg md:text-xl text-sky-300">
           A seasoned full-stack developer passionate about creating digital
           solutions that make an impact. Let's embark on a coding adventure!
@@ -203,12 +159,9 @@ export default function Home() {
         <h2 className="text-3xl font-bold text-sky-200 mb-4">Tech Stack</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-8">
           <div className="flex flex-wrap justify-center items-center">
-            <div
-              className="flex items-center justify-center"
-            >
+            <div className="flex items-center justify-center">
               <ThreeDCardDemo />
             </div>
-
           </div>
         </div>
       </section>
