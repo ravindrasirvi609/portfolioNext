@@ -8,73 +8,12 @@ import Awards from "../components/award";
 import { ThreeDCardDemo } from "@/components/tech-card";
 import { SparklesPreview } from "@/components/spark";
 import { TypewriterEffectSmoothDemo } from "@/components/typewriter-effect";
+import { projects, skills } from "@/data";
 
 export default function Home() {
-  const skills = [
-    {
-      title: "Frontend Development",
-      items: [
-        "Angular",
-        "React.js",
-        "Next.js",
-        "HTML",
-        "CSS",
-        "JavaScript",
-        "Typescript",
-        "Tailwind CSS",
-        "Bootstrap",
-      ],
-    },
-    {
-      title: "Backend Development",
-      items: [
-        "ASP.Net Core",
-        "Node.js",
-        "Express.js",
-        "Database Management (MongoDB, MySQL)",
-        "RESTful APIs",
-      ],
-    },
-    {
-      title: "Other Skills",
-      items: [
-        "Version Control (Git)",
-        "API Design and Integration",
-        "UI/UX Design",
-        "Agile Methodologies",
-        "CI/CD",
-        "Docker",
-        "kubernates",
-      ],
-    },
-  ];
-
-  const projects = [
-    {
-      title: "Business Risk Management Web Application",
-      description:
-        "Implemented a comprehensive business risk management system, identifying, classifying, and assigning impact scores to enhance financial stability and operational efficiency. Achieved a 24% reduction in non-essential costs while prioritizing resources through total-cost analysis.",
-    },
-    {
-      title: "Social:Social Media Web Application",
-      description:
-        "Crafted a dynamic social media app using Angular, enabling users to create, like, and comment on posts. The app also includes a real-time chat feature, fostering engaging interactions and seamless communication among users.",
-    },
-    {
-      title: "Pharma Student Registration Platform (Next.js 14)",
-      description:
-        "Engineered a Next.js 14 project for Pharma Students and Conferences Registration. This platform ensures secure authentication, real-time updates, and responsiveness. Integrated payment gateways facilitate smooth transactions, offering an efficient solution for both students and conference organizers. Explore the firsthand experience through the project link.",
-    },
-    {
-      title: "Event Management (Next.js 14)",
-      description:
-        "Event Management Tools Used: Clerk Authentication, ShadCN UI, and Stripe Payment Gateway. With this application, organizations can create events, and users have the option to join these events, which may have optional prices.",
-    },
-  ];
-
   return (
-    <main className="flex flex-col items-center justify-center min-h-screen p-8 md:p-24 bg-slate-900">
-                    {/* Hero Section */}
+    <main className="flex flex-col items-center justify-center min-h-screen p-8 md:p-16 lg:p-24 bg-slate-900">
+      {/* Hero Section */}
       <section className="my-8 lg:my-16 xl:my-24 flex flex-col lg:flex-row items-center justify-center">
         <div className="content text-center lg:text-left">
           <h2 className="text-base md:text-4xl xl:text-5xl font-bold mb-4">
@@ -85,23 +24,22 @@ export default function Home() {
           </h2>
         </div>
       </section>
-      <div className="text-center">
-        <h1 className="font-bold text-4xl md:text-6xl my-12 text-sky-200">
+      <div className="text-center mx-auto max-w-screen-lg px-4 sm:px-6 md:px-8">
+        <h1 className="font-bold text-2xl md:text-4xl lg:text-6xl my-6 text-sky-200">
           <SparklesPreview />
         </h1>
-
         <TypewriterEffectSmoothDemo />
-
-        {/* <p className="text-lg md:text-xl text-sky-800 mt-4">
-          <a href="#" className="underline">
-            Discover my projects
-          </a>{" "}
-          or{" "}
-          <a href="#" className="underline">
-            get in touch
-          </a>{" "}
-          to discuss your unique ideas.
-        </p> */}
+        {/* Add responsive styling to the paragraph if needed */}
+        {/* <p className="text-base md:text-lg lg:text-xl text-sky-800 mt-4">
+    <a href="#" className="underline">
+      Discover my projects
+    </a>{" "}
+    or{" "}
+    <a href="#" className="underline">
+      get in touch
+    </a>{" "}
+    to discuss your unique ideas.
+  </p> */}
       </div>
       {/* About Section */}
       <section className="mt-44">
