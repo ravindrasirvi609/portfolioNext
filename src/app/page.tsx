@@ -8,7 +8,9 @@ import Awards from "../components/award";
 import { ThreeDCardDemo } from "@/components/tech-card";
 import { SparklesPreview } from "@/components/spark";
 import { TypewriterEffectSmoothDemo } from "@/components/typewriter-effect";
-import { projects, skills } from "@/data";
+import { projects, skills, words } from "@/data";
+import { MeteorsDemo } from "@/components/meteorscards";
+import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 
 export default function Home() {
   return (
@@ -59,8 +61,8 @@ export default function Home() {
             </p>
           </div>
           <div className="md:w-full text-center">
-            <p
-              id="rainbow-section"
+          <TextGenerateEffect words={words} />
+            {/* <p
               className="text-base md:text-xl lg:text-lg text-sky-400"
             >
               Highly motivated Computer Science and Engineering graduate with
@@ -83,7 +85,7 @@ export default function Home() {
               passionate about learning new technologies and frameworks. I am
               currently looking for a full-time role in an innovative and
               challenging environment.
-            </p>
+            </p> */}
           </div>
         </div>
       </section>
@@ -120,7 +122,7 @@ export default function Home() {
         <h2 className="text-3xl font-bold text-sky-200 mb-4">Projects</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <ProjectCard key={index} {...project} />
+            <MeteorsDemo key={index} {...project} />
           ))}
         </div>
       </section>

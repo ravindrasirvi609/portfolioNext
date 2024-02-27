@@ -1,3 +1,5 @@
+import { MeteorsDemo } from "./meteorscards";
+
 export const ProjectCard = ({
   title,
   description,
@@ -5,8 +7,12 @@ export const ProjectCard = ({
   title: string;
   description: string;
 }) => (
-  <div className="p-4 border rounded-md shadow-md bg-sky-500">
+  <>
+  {/* <MeteorsDemo  /> */}
+  {/* <div className="p-4 border rounded-md shadow-md bg-sky-500">
     <h3 className="text-xl font-bold text-black mb-2">{title}</h3>
     <p>{description}</p>
-  </div>
+  </div> */}
+  </>
+  
 );

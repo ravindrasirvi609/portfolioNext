@@ -73,3 +73,8 @@ export const projects = [
                       "Event Management Tools Used: Clerk Authentication, ShadCN UI, and Stripe Payment Gateway. With this application, organizations can create events, and users have the option to join these events, which may have optional prices.",
                   },
                 ];
+
+export const words = "Highly motivated Computer Science and Engineering graduate with two years of professional experience as a Full Stack Developer. Possesses a strong understanding of web development principles, with proficiency in HTML, CSS, TypeScript, JavaScript and ASP.NET Core. Skilled in designing and developing responsive web applications using Angular Next JS Frameworks, as well as integrating APIs and optimizing web performance. Committed to delivering high-quality work and eager to continue expanding skills and knowledge in the field of software development. I have worked with clients from all over the world and I am passionate about learning new technologies and frameworks. I am currently looking for a full-time role in an innovative and challenging environment."
+
+
+
