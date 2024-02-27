@@ -25,7 +25,7 @@ export default function Home() {
         </div>
       </section>
       <div className="text-center mx-auto max-w-screen-lg px-4 sm:px-6 md:px-8">
-        <h1 className="font-bold text-2xl md:text-4xl lg:text-6xl my-6 text-sky-200">
+        <h1 className="font-bold text-2xl md:text-4xl lg:text-6xl text-sky-200">
           <SparklesPreview />
         </h1>
         <TypewriterEffectSmoothDemo />
