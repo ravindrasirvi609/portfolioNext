@@ -61,7 +61,7 @@ export default function Home() {
             </p>
           </div>
           <div className="md:w-full text-center">
-          <TextGenerateEffect words={words} />
+            <TextGenerateEffect words={words} />
             {/* <p
               className="text-base md:text-xl lg:text-lg text-sky-400"
             >
@@ -104,13 +104,15 @@ export default function Home() {
       <section className="mt-24">
         <h2 className="text-3xl font-bold text-sky-200 mb-4">Skills</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {skills.map(({ title, items }) => (
-            // <SkillCard key={index} {...skill} />
-            <div className="p-4 border rounded-md shadow-md bg-sky-500">
+          {skills.map(({ title, items }, index) => (
+            <div
+              key={index}
+              className="p-4 border rounded-md shadow-md bg-sky-500"
+            >
               <h3 className="text-xl font-bold text-black mb-2">{title}</h3>
               <ul className="list-disc list-inside">
-                {items.map((item, index) => (
-                  <li key={index}>{item}</li>
+                {items.map((item, idx) => (
+                  <li key={idx}>{item}</li>
                 ))}
               </ul>
             </div>
