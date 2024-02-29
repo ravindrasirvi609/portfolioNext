@@ -7,9 +7,10 @@ import Awards from "../components/award";
 import { ThreeDCardDemo } from "@/components/tech-card";
 import { SparklesPreview } from "@/components/spark";
 import { TypewriterEffectSmoothDemo } from "@/components/typewriter-effect";
-import { projects, skills, words } from "@/data";
+import { projects, skillList, skills, words } from "@/data";
 import { MeteorsDemo } from "@/components/meteorscards";
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
+import { HoverEffect } from "@/components/ui/card-hover-effect";
 
 export default function Home() {
   return (
@@ -102,20 +103,20 @@ export default function Home() {
       {/* Skills Section */}
       <section className="mt-24">
         <h2 className="text-3xl font-bold text-sky-200 mb-4">Skills</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {skills.map(({ title, items }, index) => (
-            <div
-              key={index}
-              className="p-4 border rounded-md shadow-md bg-sky-500"
-            >
-              <h3 className="text-xl font-bold text-black mb-2">{title}</h3>
-              <ul className="list-disc list-inside">
-                {items.map((item, idx) => (
-                  <li key={idx}>{item}</li>
-                ))}
-              </ul>
-            </div>
-          ))}
+        <div className="max-w-5xl mx-auto px-8">
+          <HoverEffect
+            items={skills.map((skill) => ({
+              title: skill.title,
+              description: (
+                <ul className="list-disc ml-6">
+                  {skill.items.map((item, index) => (
+                    <li key={index}>{item}</li>
+                  ))}
+                </ul>
+              ),
+              link: "", // You can provide a link if needed
+            }))}
+          />
         </div>
       </section>
       {/* Projects Section */}
