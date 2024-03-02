@@ -62,30 +62,6 @@ export default function Home() {
           </div>
           <div className="md:w-full text-center">
             <TextGenerateEffect words={words} />
-            {/* <p
-              className="text-base md:text-xl lg:text-lg text-sky-400"
-            >
-              Highly motivated Computer Science and Engineering graduate with
-              two years of professional experience as a Full Stack Developer.
-              Possesses a strong understanding of web development principles,
-              with proficiency in{" "}
-              <span className="text-sky-200">
-                HTML, CSS, TypeScript, JavaScript{" "}
-              </span>{" "}
-              and <span className="text-sky-200">ASP.NET Core.</span> Skilled in
-              designing and developing responsive web applications using{" "}
-              <span className="text-sky-200">Angular</span> and{" "}
-              <span className="text-sky-200">Next JS</span> Frameworks, as well
-              as integrating APIs and optimizing web performance. Committed to
-              delivering high-quality work and eager to continue expanding
-              skills and knowledge in the field of software development.
-            </p>
-            <p className="text-base md:text-xl lg:text-lg text-sky-400 mt-4">
-              I have worked with clients from all over the world and I am
-              passionate about learning new technologies and frameworks. I am
-              currently looking for a full-time role in an innovative and
-              challenging environment.
-            </p> */}
           </div>
         </div>
       </section>
@@ -120,7 +96,7 @@ export default function Home() {
         </div>
       </section>
       {/* Projects Section */}
-      <section className="mt-12">
+      <section className="mt-12" id="projects">
         <h2 className="text-3xl font-bold text-sky-200 mb-4">Projects</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
@@ -137,7 +113,10 @@ export default function Home() {
       {/* Awards Section */}
       <Awards />
       {/* Contact Section */}
-      <section className="container mx-auto p-4 md:py-12 rounded-lg shadow-md mt-16 ">
+      <section
+        className="container mx-auto p-4 md:py-12 rounded-lg shadow-md mt-16"
+        id="contact"
+      >
         <div className="w-full dark:bg-black bg-white dark:bg-grid-white/[0.2] bg-grid-black/[0.2] relative flex flex-col items-center justify-center">
           {/* Radial gradient for the container to give a faded look */}
           <div className="absolute inset-0 z-0 dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
