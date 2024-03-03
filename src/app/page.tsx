@@ -89,14 +89,16 @@ export default function Home() {
       <section className="mt-44">
         <h2 className="text-3xl font-bold text-sky-200 mb-6">About Me</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="flex flex-col items-center justify-center md:w-96 md:h-96">
+          <div className="flex flex-col items-center justify-center md:w-96 md:h-96 shadow-lg">
             <Image
               src="/profile.jpg"
               alt="Ravindra"
               width={300}
               height={300}
-              className="rounded-full"
+              className="rounded-full shadow-lg hover:shadow-xl transform transition duration-300 ease-in-out hover:scale-105 rotate-3"
+              style={{ perspective: "1000px" }}
             />
+
             <h3 className="text-xl font-bold text-sky-200 mt-4">Ravindra</h3>
             <p className="text-base md:text-xl lg:text-lg text-sky-400">
               Full Stack Developer
