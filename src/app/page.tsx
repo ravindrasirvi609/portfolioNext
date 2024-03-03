@@ -11,7 +11,49 @@ import { projects, skillList, skills, words } from "@/data";
 import { MeteorsDemo } from "@/components/meteorscards";
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 import { HoverEffect } from "@/components/ui/card-hover-effect";
+import { FaEnvelope, FaPhone, FaLinkedin, FaGithub } from "react-icons/fa";
+import { motion } from "framer-motion";
 
+const contactLinks = [
+  {
+    icon: <FaEnvelope className="mr-2" />,
+    text: "Email",
+    href: "mailto:sirviravindra609@gmail.com",
+  },
+  {
+    icon: <FaPhone className="mr-2" />,
+    text: "Contact No.",
+    href: "tel:+918107199052",
+  },
+  {
+    icon: <FaLinkedin className="mr-2" />,
+    text: "LinkedIn",
+    href: "https://www.linkedin.com/in/ravindra-sirvi/",
+    target: "_blank",
+    rel: "noopener noreferrer",
+  },
+  {
+    icon: <FaGithub className="mr-2" />,
+    text: "GitHub",
+    href: "https://github.com/ravindrasirvi609",
+    target: "_blank",
+    rel: "noopener noreferrer",
+  },
+];
+const ContactLink = ({ icon, text, href, target, rel }: any) => {
+  return (
+    <motion.a
+      whileHover={{ scale: 1.1 }}
+      className="flex items-center text-xl text-sky-300 hover:text-sky-200"
+      href={href}
+      target={target}
+      rel={rel}
+    >
+      {icon}
+      {text}
+    </motion.a>
+  );
+};
 export default function Home() {
   return (
     <main className="flex flex-col items-center justify-center min-h-screen p-8 md:p-16 lg:p-24 bg-slate-900 extra-margin">
@@ -59,6 +101,11 @@ export default function Home() {
             <p className="text-base md:text-xl lg:text-lg text-sky-400">
               Full Stack Developer
             </p>
+            <div className="flex mt-4 space-x-4">
+              {contactLinks.map((link) => (
+                <ContactLink key={link.text} {...link} />
+              ))}
+            </div>
           </div>
           <div className="md:w-full text-center">
             <TextGenerateEffect words={words} />
