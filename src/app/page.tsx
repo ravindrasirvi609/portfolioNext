@@ -130,12 +130,12 @@ export default function Home() {
         <h2 className="text-3xl font-bold text-sky-200 mb-4">Skills</h2>
         <div className="max-w-5xl mx-auto px-8">
           <HoverEffect
-            items={skills.map((skill) => ({
+            items={skills.map((skill, index) => ({
               title: skill.title,
               description: (
                 <ul className="list-disc ml-6">
-                  {skill.items.map((item, index) => (
-                    <li key={index}>{item}</li>
+                  {skill.items.map((item, itemIndex) => (
+                    <li key={`${index}-${itemIndex}`}>{item}</li>
                   ))}
                 </ul>
               ),
