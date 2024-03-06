@@ -13,6 +13,7 @@ import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 import { HoverEffect } from "@/components/ui/card-hover-effect";
 import { FaEnvelope, FaPhone, FaLinkedin, FaGithub } from "react-icons/fa";
 import { motion } from "framer-motion";
+import { BackgroundGradientAnimation } from "@/components/ui/background-gradient-animation";
 
 const contactLinks = [
   {
@@ -56,8 +57,11 @@ const ContactLink = ({ icon, text, href, target, rel }: any) => {
 };
 export default function Home() {
   return (
+  //  <BackgroundGradientAnimation>
+
     <main className="flex flex-col items-center justify-center min-h-screen p-8 md:p-16 lg:p-24 bg-slate-900 extra-margin">
       {/* Hero Section */}
+      
       <section className="my-8 lg:my-16 xl:my-24 flex flex-col lg:flex-row items-center justify-center">
         <div className="content text-center lg:text-left">
           <h2 className="text-base md:text-4xl xl:text-5xl font-bold mb-4">
@@ -229,5 +233,7 @@ export default function Home() {
         </div>
       </section>
     </main>
+ //   </BackgroundGradientAnimation>
+
   );
 }
