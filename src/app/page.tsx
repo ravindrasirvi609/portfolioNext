@@ -77,17 +77,6 @@ export default function Home() {
           <SparklesPreview />
         </h1>
         <TypewriterEffectSmoothDemo />
-        {/* Add responsive styling to the paragraph if needed */}
-        {/* <p className="text-base md:text-lg lg:text-xl text-sky-800 mt-4">
-    <a href="#" className="underline">
-      Discover my projects
-    </a>{" "}
-    or{" "}
-    <a href="#" className="underline">
-      get in touch
-    </a>{" "}
-    to discuss your unique ideas.
-  </p> */}
       </div>
       {/* About Section */}
       <section className="mt-44">
