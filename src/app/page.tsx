@@ -13,7 +13,8 @@ import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 import { HoverEffect } from "@/components/ui/card-hover-effect";
 import { FaEnvelope, FaPhone, FaLinkedin, FaGithub } from "react-icons/fa";
 import { motion } from "framer-motion";
-import { BackgroundGradientAnimation } from "@/components/ui/background-gradient-animation";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 const contactLinks = [
   {
@@ -56,12 +57,64 @@ const ContactLink = ({ icon, text, href, target, rel }: any) => {
   );
 };
 export default function Home() {
+    const [location, setLocation] = useState<{
+    latitude: number;
+    longitude: number;
+  } | null>(null);
+ const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false); // Set loading state to false after a timeout
+    }, 10000); // Adjust timeout duration as needed (e.g., 10 seconds)
+
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          clearTimeout(timer);
+          setLocation({
+            latitude: position.coords.latitude,
+            longitude: position.coords.longitude,
+          });
+          console.log("Location:", location);
+          
+          submitHandler();
+        },
+        (error) => {
+          console.error("Error getting location:", error);
+          setIsLoading(false); // Set loading state to false on error
+        }
+      );
+    } else {
+      console.error("Geolocation is not supported by this browser.");
+      setIsLoading(false); // Set loading state to false if geolocation is not supported
+    }
+
+    return () => clearTimeout(timer); // Cleanup timer on component unmount
+  }, [location]);
+
+  const submitHandler = async () => {
+    if (location) {
+      console.log("Submitting location:", location);
+      
+      try {
+        const response = await axios.post("/api/addVisitor", location);
+        console.log(response);
+      } catch (error) {
+        console.error("Error submitting location:", error);
+      }
+    } else {
+      console.error("Location is not available.");
+    }
+  };
+
+
   return (
-  //  <BackgroundGradientAnimation>
+    //  <BackgroundGradientAnimation>
 
     <main className="flex flex-col items-center justify-center min-h-screen p-8 md:p-16 lg:p-24 bg-slate-900 extra-margin">
       {/* Hero Section */}
-      
+
       <section className="my-8 lg:my-16 xl:my-24 flex flex-col lg:flex-row items-center justify-center">
         <div className="content text-center lg:text-left">
           <h2 className="text-base md:text-4xl xl:text-5xl font-bold mb-4">
@@ -107,6 +160,10 @@ export default function Home() {
           </div>
         </div>
       </section>
+      {/* Location Section */}
+      <h1 className="text-white font-bold text-lg">
+        location: {location?.latitude}, {location?.longitude}
+      </h1>
       {/* Tech Stack Section */}
       <section className="mt-24">
         <h2 className="text-3xl font-bold text-sky-200 mb-4">Tech Stack</h2>
@@ -222,7 +279,6 @@ export default function Home() {
         </div>
       </section>
     </main>
- //   </BackgroundGradientAnimation>
-
+    //   </BackgroundGradientAnimation>
   );
 }
