@@ -72,13 +72,12 @@ export default function Home() {
       navigator.geolocation.getCurrentPosition(
         (position) => {
           clearTimeout(timer);
-          setLocation({
+          const newLocation = {
             latitude: position.coords.latitude,
             longitude: position.coords.longitude,
-          });
-          console.log("Location:", location);
-
-          submitHandler();
+          };
+          setLocation(newLocation);
+          console.log("Location:", newLocation);
         },
         (error) => {
           console.error("Error getting location:", error);
@@ -91,22 +90,23 @@ export default function Home() {
     }
 
     return () => clearTimeout(timer); // Cleanup timer on component unmount
+  }, []);
+
+  useEffect(() => {
+    if (location) {
+      submitHandler(location);
+    }
   }, [location]);
 
-  const submitHandler = async () => {
-    if (location) {
-      console.log("Submitting location:", location);
-
-      try {
-        const response = await axios.post("/api/addVisitor", location);
-        console.log(response);
-      } catch (error) {
-        console.error("Error submitting location:", error);
-      }
-    } else {
-      console.error("Location is not available.");
+  const submitHandler = async (location: { latitude: number; longitude: number; }) => {
+    try {
+      const response = await axios.post("/api/addVisitor", location);
+      console.log(response);
+    } catch (error) {
+      console.error("Error submitting location:", error);
     }
   };
+
 
 
   return (
