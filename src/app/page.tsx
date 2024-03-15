@@ -57,11 +57,11 @@ const ContactLink = ({ icon, text, href, target, rel }: any) => {
   );
 };
 export default function Home() {
-    const [location, setLocation] = useState<{
+  const [location, setLocation] = useState<{
     latitude: number;
     longitude: number;
   } | null>(null);
- const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -77,7 +77,7 @@ export default function Home() {
             longitude: position.coords.longitude,
           });
           console.log("Location:", location);
-          
+
           submitHandler();
         },
         (error) => {
@@ -96,7 +96,7 @@ export default function Home() {
   const submitHandler = async () => {
     if (location) {
       console.log("Submitting location:", location);
-      
+
       try {
         const response = await axios.post("/api/addVisitor", location);
         console.log(response);
@@ -189,7 +189,7 @@ export default function Home() {
                   ))}
                 </ul>
               ),
-              link: "", // You can provide a link if needed
+              link: "",
             }))}
           />
         </div>

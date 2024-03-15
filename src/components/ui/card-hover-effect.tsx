@@ -26,7 +26,7 @@ export const HoverEffect = ({
       {items.map((item, idx) => (
         <Link
           href={item?.link}
-          key={item?.link}
+          key={item?.title} // Use a unique property of item as the key
           className="relative group  block p-2 h-full w-full"
           onMouseEnter={() => setHoveredIndex(idx)}
           onMouseLeave={() => setHoveredIndex(null)}
@@ -99,13 +99,13 @@ export const CardDescription = ({
   children: React.ReactNode;
 }) => {
   return (
-    <p
+    <div
       className={cn(
         "mt-8 text-zinc-400 tracking-wide leading-relaxed text-sm",
         className
       )}
     >
       {children}
-    </p>
+    </div>
   );
 };

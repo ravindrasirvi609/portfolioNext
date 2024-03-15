@@ -1,15 +1,28 @@
 import { cn } from "@/utils/cn";
-import clsx from "clsx";
-import React from "react";
 
 export const Meteors = ({
   number,
   className,
+  meteorPositions,
 }: {
   number?: number;
   className?: string;
+  meteorPositions?: { left: string; delay: string; duration: string }[]; // Define type for meteorPositions
 }) => {
   const meteors = new Array(number || 20).fill(true);
+
+  const generateRandomPosition = () => {
+    return Math.floor(Math.random() * (400 - -400) + -400) + "px";
+  };
+
+  const generateRandomDelay = () => {
+    return Math.random() * (0.8 - 0.2) + 0.2 + "s";
+  };
+
+  const generateRandomDuration = () => {
+    return Math.floor(Math.random() * (10 - 2) + 2) + "s";
+  };
+
   return (
     <>
       {meteors.map((el, idx) => (
@@ -22,9 +35,9 @@ export const Meteors = ({
           )}
           style={{
             top: 0,
-            left: Math.floor(Math.random() * (400 - -400) + -400) + "px",
-            animationDelay: Math.random() * (0.8 - 0.2) + 0.2 + "s",
-            animationDuration: Math.floor(Math.random() * (10 - 2) + 2) + "s",
+            left: generateRandomPosition(),
+            animationDelay: generateRandomDelay(),
+            animationDuration: generateRandomDuration(),
           }}
         ></span>
       ))}
