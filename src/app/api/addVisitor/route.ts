@@ -1,14 +1,16 @@
 import { connect } from "@/dbConfig/dbConfig";
 import { NextRequest, NextResponse } from "next/server";
-import Visitor from "../../../model/visitorModel";
+import VisitorModel from "../../../model/visitorModel";
+
 connect();
 
 export async function POST(req: NextRequest) {
   try {
-    const { location } = await req.json();
-    console.log("Location:", location);
+    const { latitude, longitude } = await req.json();
+    console.log("Latitude:", latitude);
+    console.log("Longitude:", longitude);
 
-    const visitor = new Visitor({ location });
+    const visitor = new VisitorModel({ latitude, longitude });
     await visitor.save();
     return NextResponse.json("Visitor added successfully");
   } catch (error: any) {

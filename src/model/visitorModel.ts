@@ -1,13 +1,13 @@
 import mongoose from "mongoose";
 
 const visitorSchema = new mongoose.Schema({
-  location: { type: String },
+  latitude: { type: Number },
+  longitude: { type: Number },
   createdAt: { type: Date, default: Date.now },
   updatedAt: { type: Date, default: Date.now },
 });
 
-const VisitorSchema =
-  mongoose.models.visitorSchema ||
-  mongoose.model("visitorModel", visitorSchema);
+const VisitorModel =
+  mongoose.models.visitorModel || mongoose.model("Visitor", visitorSchema);
 
-export default VisitorSchema;
+export default VisitorModel;
