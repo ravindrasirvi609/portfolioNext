@@ -62,6 +62,14 @@ export default function Home() {
     longitude: number;
   } | null>(null);
   const [isLoading, setIsLoading] = useState(true);
+  const [formData, setFormData] = useState({
+    name: '',
+    mobileNo: '',
+    email: '',
+    message: ''
+  });
+  const [Loading, setLoading] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -107,6 +115,34 @@ export default function Home() {
     }
   };
 
+  const handleChange = (e: { target: { id: any; value: any; }; }) => {
+    setFormData({ ...formData, [e.target.id]: e.target.value });
+  };
+
+  const handleSubmit = async (e: { preventDefault: () => void; }) => {
+    e.preventDefault(); // Prevent the default form submission behavior
+    setLoading(true); // Show loader
+
+    try {
+      const response = await axios.post("/api/userData", formData);
+      console.log(response);
+      setIsSubmitted(true); // Mark form as submitted
+
+      // You can add a message or perform any other action to indicate successful submission here
+    } catch (error) {
+      console.error("Error submitting user:", error);
+      // Handle error state here
+    }
+    finally {
+      setLoading(false); // Hide loader regardless of success or failure
+      setFormData({ // Reset form fields
+        name: '',
+        mobileNo: '',
+        email: '',
+        message: ''
+      });
+    }
+  };
 
 
   return (
@@ -160,10 +196,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-      {/* Location Section */}
-      <h1 className="text-white font-bold text-lg">
-        location: {location?.latitude}, {location?.longitude}
-      </h1>
       {/* Tech Stack Section */}
       <section className="mt-24">
         <h2 className="text-3xl font-bold text-sky-200 mb-4">Tech Stack</h2>
@@ -223,62 +255,33 @@ export default function Home() {
             Contact
           </p>
 
-          <form className="w-full max-w-md px-4 relative z-10">
+          <form className="w-full max-w-md px-4 relative z-10" onSubmit={handleSubmit}>
             <div className="mb-4">
-              <label
-                htmlFor="name"
-                className="block text-sm font-medium text-gray-700 mb-2"
-              >
-                Name
-              </label>
-              <input
-                type="text"
-                id="name"
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                placeholder="Your Name"
-              />
+              <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">Name</label>
+              <input type="text" id="name" value={formData.name} onChange={handleChange} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Your Name" />
             </div>
 
             <div className="mb-4">
-              <label
-                htmlFor="email"
-                className="block text-sm font-medium text-gray-700 mb-2"
-              >
-                Email
-              </label>
-              <input
-                type="email"
-                id="email"
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                placeholder="Your Email"
-              />
+              <label htmlFor="mobileNo" className="block text-sm font-medium text-gray-700 mb-2">Mobile No.</label>
+              <input type="number" id="mobileNo" value={formData.mobileNo} onChange={handleChange} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Your Mobile No" />
+            </div>
+
+            <div className="mb-4">
+              <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">Email</label>
+              <input type="email" id="email" value={formData.email} onChange={handleChange} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Your Email" />
             </div>
 
             <div className="mb-6">
-              <label
-                htmlFor="message"
-                className="block text-sm font-medium text-gray-700 mb-2"
-              >
-                Message
-              </label>
-              <textarea
-                id="message"
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline resize-none"
-                rows={4}
-                placeholder="Your Message"
-              ></textarea>
+              <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">Message</label>
+              <textarea id="message" value={formData.message} onChange={handleChange} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline resize-none" rows={4} placeholder="Your Message"></textarea>
             </div>
-
-            <button
-              type="button"
-              className="w-full mb-16 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-            >
-              Send Message
-            </button>
+            {Loading && <div>Loading...</div>}
+            {isSubmitted && <div>Form submitted successfully!</div>}
+            <button type="submit" disabled={Loading} className="w-full mb-16 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Send Message</button>
           </form>
         </div>
       </section>
-    </main>
+    </main >
     //   </BackgroundGradientAnimation>
   );
 }

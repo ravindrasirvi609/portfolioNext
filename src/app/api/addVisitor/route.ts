@@ -7,9 +7,6 @@ connect();
 export async function POST(req: NextRequest) {
   try {
     const { latitude, longitude } = await req.json();
-    console.log("Latitude:", latitude);
-    console.log("Longitude:", longitude);
-
     const visitor = new VisitorModel({ latitude, longitude });
     await visitor.save();
     return NextResponse.json("Visitor added successfully");
