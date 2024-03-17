@@ -73,8 +73,8 @@ export default function Home() {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setIsLoading(false); // Set loading state to false after a timeout
-    }, 10000); // Adjust timeout duration as needed (e.g., 10 seconds)
+      setIsLoading(false);
+    }, 10000);
 
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
@@ -89,15 +89,15 @@ export default function Home() {
         },
         (error) => {
           console.error("Error getting location:", error);
-          setIsLoading(false); // Set loading state to false on error
+          setIsLoading(false);
         }
       );
     } else {
       console.error("Geolocation is not supported by this browser.");
-      setIsLoading(false); // Set loading state to false if geolocation is not supported
+      setIsLoading(false);
     }
 
-    return () => clearTimeout(timer); // Cleanup timer on component unmount
+    return () => clearTimeout(timer);
   }, []);
 
   useEffect(() => {
@@ -120,22 +120,19 @@ export default function Home() {
   };
 
   const handleSubmit = async (e: { preventDefault: () => void; }) => {
-    e.preventDefault(); // Prevent the default form submission behavior
-    setLoading(true); // Show loader
+    e.preventDefault();
+    setLoading(true);
 
     try {
       const response = await axios.post("/api/userData", formData);
       console.log(response);
-      setIsSubmitted(true); // Mark form as submitted
-
-      // You can add a message or perform any other action to indicate successful submission here
+      setIsSubmitted(true);
     } catch (error) {
       console.error("Error submitting user:", error);
-      // Handle error state here
     }
     finally {
-      setLoading(false); // Hide loader regardless of success or failure
-      setFormData({ // Reset form fields
+      setLoading(false);
+      setFormData({
         name: '',
         mobileNo: '',
         email: '',
