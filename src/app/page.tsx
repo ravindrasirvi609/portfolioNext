@@ -7,7 +7,7 @@ import Awards from "../components/award";
 import { ThreeDCardDemo } from "@/components/tech-card";
 import { SparklesPreview } from "@/components/spark";
 import { TypewriterEffectSmoothDemo } from "@/components/typewriter-effect";
-import { projects, skillList, skills, words } from "@/data";
+import { projects, skills, words } from "@/data";
 import { MeteorsDemo } from "@/components/meteorscards";
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 import { HoverEffect } from "@/components/ui/card-hover-effect";
