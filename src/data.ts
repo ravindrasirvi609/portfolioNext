@@ -72,6 +72,16 @@ export const projects = [
     description:
       "Event Management Tools Used: Clerk Authentication, ShadCN UI, and Stripe Payment Gateway. With this application, organizations can create events, and users have the option to join these events, which may have optional prices.",
   },
+  {
+    title: "NextGen Magzine (Next.js 14)",
+    description:
+      "Developed an Magzine website platform using Next.js 14, enabling users to browse magzines, add them to their cart, and complete transactions. Integrated Rozerpay payment gateway for secure and seamless transactions, ensuring a user-friendly PDF reading experience.",
+  },
+  {
+    title: "Portfolio Website",
+    description:
+      "Designed and developed a responsive portfolio website using React.js, showcasing projects, skills, and experience. The website features a clean and modern design, providing an interactive and engaging user experience.",
+  },
 ];
 
 export const words =
