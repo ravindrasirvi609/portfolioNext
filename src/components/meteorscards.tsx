@@ -1,12 +1,15 @@
 import React from "react";
 import { Meteors } from "./ui/meteors";
+import Link from "next/link";
 
 export function MeteorsDemo({
   title,
   description,
+  url,
 }: {
   title: string;
   description: string;
+  url: string;
 }) {
   return (
     <div className="">
@@ -39,7 +42,9 @@ export function MeteorsDemo({
           </p>
 
           <button className="border px-4 py-1 rounded-lg  border-gray-500 text-gray-300">
-            Explore
+            <Link href={url} target="_blank">
+              Explore
+            </Link>
           </button>
 
           {/* Meaty part - Meteor effect */}
