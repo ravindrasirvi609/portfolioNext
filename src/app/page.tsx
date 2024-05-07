@@ -147,7 +147,7 @@ export default function Home() {
   return (
     //  <BackgroundGradientAnimation>
 
-    <main className="flex flex-col items-center justify-center min-h-screen p-8 md:p-16 lg:p-24 bg-slate-900 extra-margin">
+    <main className="flex flex-col items-center justify-center min-h-screen p-8 md:p-16 lg:p-24 bg-black-900 extra-margin">
       {/* Hero Section */}
       <NextSeo
         title="Ravindra Choudhary"
