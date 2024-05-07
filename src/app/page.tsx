@@ -15,6 +15,7 @@ import { FaEnvelope, FaPhone, FaLinkedin, FaGithub } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { NextSeo } from "next-seo";
 
 const contactLinks = [
   {
@@ -63,10 +64,10 @@ export default function Home() {
   } | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [formData, setFormData] = useState({
-    name: '',
-    mobileNo: '',
-    email: '',
-    message: ''
+    name: "",
+    mobileNo: "",
+    email: "",
+    message: "",
   });
   const [Loading, setLoading] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -106,7 +107,10 @@ export default function Home() {
     }
   }, [location]);
 
-  const submitHandler = async (location: { latitude: number; longitude: number; }) => {
+  const submitHandler = async (location: {
+    latitude: number;
+    longitude: number;
+  }) => {
     try {
       const response = await axios.post("/api/addVisitor", location);
       console.log(response);
@@ -115,11 +119,11 @@ export default function Home() {
     }
   };
 
-  const handleChange = (e: { target: { id: any; value: any; }; }) => {
+  const handleChange = (e: { target: { id: any; value: any } }) => {
     setFormData({ ...formData, [e.target.id]: e.target.value });
   };
 
-  const handleSubmit = async (e: { preventDefault: () => void; }) => {
+  const handleSubmit = async (e: { preventDefault: () => void }) => {
     e.preventDefault();
     setLoading(true);
 
@@ -129,25 +133,27 @@ export default function Home() {
       setIsSubmitted(true);
     } catch (error) {
       console.error("Error submitting user:", error);
-    }
-    finally {
+    } finally {
       setLoading(false);
       setFormData({
-        name: '',
-        mobileNo: '',
-        email: '',
-        message: ''
+        name: "",
+        mobileNo: "",
+        email: "",
+        message: "",
       });
     }
   };
-
 
   return (
     //  <BackgroundGradientAnimation>
 
     <main className="flex flex-col items-center justify-center min-h-screen p-8 md:p-16 lg:p-24 bg-slate-900 extra-margin">
       {/* Hero Section */}
-
+      <NextSeo
+        title="Ravindra Choudhary"
+        description="Next Js Develoepr Portfolio"
+        noindex={true}
+      />
       <section className="my-8 lg:my-16 xl:my-24 flex flex-col lg:flex-row items-center justify-center">
         <div className="content text-center lg:text-left">
           <h2 className="text-base md:text-4xl xl:text-5xl font-bold mb-4">
@@ -252,33 +258,90 @@ export default function Home() {
             Contact
           </p>
 
-          <form className="w-full max-w-md px-4 relative z-10" onSubmit={handleSubmit}>
+          <form
+            className="w-full max-w-md px-4 relative z-10"
+            onSubmit={handleSubmit}
+          >
             <div className="mb-4">
-              <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">Name</label>
-              <input type="text" id="name" value={formData.name} onChange={handleChange} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Your Name" />
+              <label
+                htmlFor="name"
+                className="block text-sm font-medium text-gray-700 mb-2"
+              >
+                Name
+              </label>
+              <input
+                type="text"
+                id="name"
+                value={formData.name}
+                onChange={handleChange}
+                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                placeholder="Your Name"
+              />
             </div>
 
             <div className="mb-4">
-              <label htmlFor="mobileNo" className="block text-sm font-medium text-gray-700 mb-2">Mobile No.</label>
-              <input type="number" id="mobileNo" value={formData.mobileNo} onChange={handleChange} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Your Mobile No" />
+              <label
+                htmlFor="mobileNo"
+                className="block text-sm font-medium text-gray-700 mb-2"
+              >
+                Mobile No.
+              </label>
+              <input
+                type="number"
+                id="mobileNo"
+                value={formData.mobileNo}
+                onChange={handleChange}
+                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                placeholder="Your Mobile No"
+              />
             </div>
 
             <div className="mb-4">
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">Email</label>
-              <input type="email" id="email" value={formData.email} onChange={handleChange} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Your Email" />
+              <label
+                htmlFor="email"
+                className="block text-sm font-medium text-gray-700 mb-2"
+              >
+                Email
+              </label>
+              <input
+                type="email"
+                id="email"
+                value={formData.email}
+                onChange={handleChange}
+                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                placeholder="Your Email"
+              />
             </div>
 
             <div className="mb-6">
-              <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">Message</label>
-              <textarea id="message" value={formData.message} onChange={handleChange} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline resize-none" rows={4} placeholder="Your Message"></textarea>
+              <label
+                htmlFor="message"
+                className="block text-sm font-medium text-gray-700 mb-2"
+              >
+                Message
+              </label>
+              <textarea
+                id="message"
+                value={formData.message}
+                onChange={handleChange}
+                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline resize-none"
+                rows={4}
+                placeholder="Your Message"
+              ></textarea>
             </div>
             {Loading && <div>Loading...</div>}
             {isSubmitted && <div>Form submitted successfully!</div>}
-            <button type="submit" disabled={Loading} className="w-full mb-16 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Send Message</button>
+            <button
+              type="submit"
+              disabled={Loading}
+              className="w-full mb-16 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            >
+              Send Message
+            </button>
           </form>
         </div>
       </section>
-    </main >
+    </main>
     //   </BackgroundGradientAnimation>
   );
 }
