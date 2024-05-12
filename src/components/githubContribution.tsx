@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import "react-calendar-heatmap/dist/styles.css";
 import { gsap, Power3, TimelineLite } from "gsap"; // Use gsap for all animation functions
+import Link from "next/link";
 
 const GithubContributions = () => {
   useEffect(() => {
@@ -44,17 +45,23 @@ const GithubContributions = () => {
       <h1 className="text-3xl font-black mb-4 text-white transition-all duration-500">
         My Github Contributions
       </h1>
-      <p className="text-lg mb-8 text-white transition-all duration-500">
+      <p className="text-lg text-bold mb-8 text-pink-500  transition-all duration-500">
         Check out my GitHub activity over time:
       </p>
       <div className="github-chart">
-        <img
-          className="rounded-lg shadow-lg transition-all duration-500"
-          src="https://ghchart.rshah.org/FF00FF/ravindrasirvi609"
-          alt="Ravindra's Github chart"
-          width={1000}
-          height={600}
-        />
+        <a
+          href="https://github.com/ravindrasirvi609"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            className="rounded-lg shadow-lg transition-all duration-500"
+            src="https://ghchart.rshah.org/FF00FF/ravindrasirvi609"
+            alt="Ravindra's Github chart"
+            width={1000}
+            height={600}
+          />
+        </a>
       </div>
     </div>
   );
