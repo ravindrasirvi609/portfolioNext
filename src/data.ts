@@ -83,6 +83,12 @@ export const projects = [
     url: "https://www.nextgenleaders.vip/",
   },
   {
+    title: "Operant BioMedical Federation (Next.js 14)",
+    description:
+      "Designed and developed a responsive website for Operant BioMedical Federation using Next.js 14, showcasing the federation's mission, vision, and services. The website features a clean and modern design, providing an interactive and engaging user experience.",
+    url: "https://operant-biomedical.vercel.app/",
+  },
+  {
     title: "Portfolio Website",
     description:
       "Designed and developed a responsive portfolio website using React.js, showcasing projects, skills, and experience. The website features a clean and modern design, providing an interactive and engaging user experience.",

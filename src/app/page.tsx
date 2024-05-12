@@ -16,6 +16,7 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { NextSeo } from "next-seo";
+import GithubContributions from "@/components/githubContribution";
 
 const contactLinks = [
   {
@@ -164,12 +165,15 @@ export default function Home() {
           </h2>
         </div>
       </section>
+
       <div className="text-center mx-auto max-w-screen-lg px-4 sm:px-6 md:px-8">
         <h1 className="font-bold text-2xl md:text-4xl lg:text-6xl text-sky-200">
           <SparklesPreview />
         </h1>
         <TypewriterEffectSmoothDemo />
       </div>
+      <GithubContributions />
+
       {/* About Section */}
       <section className="mt-44">
         <h2 className="text-3xl font-bold text-sky-200 mb-6">About Me</h2>
