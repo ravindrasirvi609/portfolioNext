@@ -3,7 +3,6 @@ import Image from "next/image";
 import Experience from "../components/exprience";
 import Education from "../components/education";
 import Certification from "../components/certification";
-import Awards from "../components/award";
 import { ThreeDCardDemo } from "@/components/tech-card";
 import { SparklesPreview } from "@/components/spark";
 import { TypewriterEffectSmoothDemo } from "@/components/typewriter-effect";
@@ -248,8 +247,6 @@ export default function Home() {
       <Education />
       {/* Certifications Section */}
       <Certification />
-      {/* Awards Section */}
-      <Awards />
       {/* Contact Section */}
       <section
         className="container mx-auto p-4 md:py-12 rounded-lg shadow-md mt-16"
