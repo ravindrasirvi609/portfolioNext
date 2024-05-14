@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import "react-calendar-heatmap/dist/styles.css";
 import { gsap, Power3, TimelineLite } from "gsap"; // Use gsap for all animation functions
 import Link from "next/link";
 
