@@ -179,7 +179,7 @@ export default function Home() {
         </h1>
         <div className="flex justify-center items-center">
           <Link
-            href="/gemini"
+            href="/text-generation"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-white hover:bg-yellow-300 text-black font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline transition duration-500 ease-in-out transform hover:scale-150"
