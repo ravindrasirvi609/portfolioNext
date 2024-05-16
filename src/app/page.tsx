@@ -16,6 +16,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { NextSeo } from "next-seo";
 import GithubContributions from "@/components/githubContribution";
+import Link from "next/link";
 
 const contactLinks = [
   {
@@ -213,6 +214,23 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <section className="">
+        <h2 className="text-3xl font-bold text-sky-200 mb-4">
+          Visite here For Chatbot
+        </h2>
+        <div className="flex justify-center items-center">
+          <Link
+            href="/gemini"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+          >
+            Chatbot
+          </Link>
+        </div>
+      </section>
+
       {/* Skills Section */}
       <section className="mt-24">
         <h2 className="text-3xl font-bold text-sky-200 mb-4">Skills</h2>
