@@ -27,10 +27,10 @@ const OpenAi = () => {
   };
 
   return (
-    <div className="container mx-auto px-4 py-8 flex flex-col items-center justify-center h-screen bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">
+    <div className="container mx-auto w-full px-4 py-8 flex flex-col items-center justify-center h-screen ">
       <form
         onSubmit={handleFormSubmit}
-        className="w-full max-w-md bg-white p-8 rounded-lg shadow-md"
+        className="w-full sm:w-4/4 md:w-3/3 lg:w-2/2 xl:w-3/3 bg-white p-8 rounded-lg shadow-md"
       >
         <input
           type="text"
@@ -59,7 +59,7 @@ const OpenAi = () => {
         </button>
       </form>
       <div
-        className="mt-8 text-white w-full max-w-md text-center"
+        className="mt-8 text-white w-full sm:w-4/4 md:w-3/3 lg:w-2/2 xl:w-3/3 text-center"
         style={{ whiteSpace: "pre-line" }}
       >
         {output}
