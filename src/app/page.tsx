@@ -173,7 +173,22 @@ export default function Home() {
         <TypewriterEffectSmoothDemo />
       </div>
       <GithubContributions />
-
+      <section className="mt-28">
+        <h1 className="animate-text bg-gradient-to-r from-red-500 via-yellow-400 to-orange-500 bg-clip-text text-transparent text-5xl font-black m-10">
+          Visit here For Chatbot Exprience{" "}
+        </h1>
+        <div className="flex justify-center items-center">
+          <Link
+            href="/gemini"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-white hover:bg-yellow-300 text-black font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline transition duration-500 ease-in-out transform hover:scale-150"
+            style={{ transitionProperty: "background-color, color, transform" }}
+          >
+            Chatbot
+          </Link>
+        </div>
+      </section>
       {/* About Section */}
       <section className="mt-44">
         <h2 className="text-3xl font-bold text-sky-200 mb-6">About Me</h2>
@@ -212,22 +227,6 @@ export default function Home() {
               <ThreeDCardDemo />
             </div>
           </div>
-        </div>
-      </section>
-
-      <section className="">
-        <h2 className="text-3xl font-bold text-sky-200 mb-4">
-          Visite here For Chatbot
-        </h2>
-        <div className="flex justify-center items-center">
-          <Link
-            href="/gemini"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-          >
-            Chatbot
-          </Link>
         </div>
       </section>
 
