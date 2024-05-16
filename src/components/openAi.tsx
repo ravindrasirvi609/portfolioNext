@@ -1,9 +1,11 @@
+"use client";
 import React, { useState } from "react";
 
 const OpenAi = () => {
   const [input, setInput] = useState("");
   const [output, setOutput] = useState("");
   const [isLoading, setIsLoading] = useState(false); // State for loader visibility
+  const [error, setError] = useState(""); // State for error message
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setInput(e.target.value);
@@ -12,18 +14,28 @@ const OpenAi = () => {
   const handleFormSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
+    setError(""); // Reset error message before new request
 
-    const response = await fetch("/api/chatBot", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ input }),
-    });
+    try {
+      const response = await fetch("/api/chatBot", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ input }),
+      });
 
-    const data = await response.json();
-    setOutput(data.text);
-    setIsLoading(false);
+      if (!response.ok) {
+        throw new Error("An error occurred while fetching data");
+      }
+
+      const data = await response.json();
+      setOutput(data.text);
+    } catch (error: any) {
+      setError(error.message);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -58,8 +70,13 @@ const OpenAi = () => {
           )}
         </button>
       </form>
+      {error && (
+        <div>
+          <p className="text-red-500 bg-yellow-400">{error}</p>
+        </div>
+      )}
       <div
-        className="mt-8 text-white w-full sm:w-4/4 md:w-3/3 lg:w-2/2 xl:w-3/3 text-center"
+        className="mt-8 text-white w-full text-center"
         style={{ whiteSpace: "pre-line" }}
       >
         {output}
