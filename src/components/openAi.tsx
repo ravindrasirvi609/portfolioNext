@@ -13,7 +13,7 @@ const OpenAi = () => {
     e.preventDefault();
     setIsLoading(true);
 
-    const response = await fetch("/api/geminiAPI", {
+    const response = await fetch("/api/chatBot", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
