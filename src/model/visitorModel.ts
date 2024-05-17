@@ -8,6 +8,6 @@ const visitorSchema = new mongoose.Schema({
 });
 
 const VisitorModel =
-  mongoose.models.visitorModel || mongoose.model("Visitor", visitorSchema);
+  mongoose.models.Visitor || mongoose.model("Visitor", visitorSchema);
 
 export default VisitorModel;
