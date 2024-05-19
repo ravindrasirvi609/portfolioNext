@@ -11,7 +11,6 @@ export async function POST(req: NextRequest) {
     const newUser = new userData(userDataFromBody);
 
     await newUser.save();
-
     const resend = new Resend(process.env.RESEND_API_KEY!);
 
     resend.emails.send({
@@ -31,6 +30,40 @@ export async function POST(req: NextRequest) {
         <li>Created At: ${newUser.createdAt}</li>
       </ul>
     </div>
+  `,
+    });
+
+    resend.emails.send({
+      from: "dev@ravindrachoudhary.in",
+      to: `${newUser.email}`,
+      subject: `Thanks for Connecting, ${newUser.name}`,
+      html: `
+    <div style="font-family: Arial, sans-serif; padding: 20px; color: #333; max-width: 600px; margin: auto; border: 1px solid #ddd; border-radius: 8px;">
+      <h1 style="font-size: 24px; color: #333; text-align: center; margin-bottom: 20px;">Connection Request</h1>
+      <p style="font-size: 18px;">Hi ${newUser.name},</p>
+      <p style="font-size: 18px;">
+        Thank you for reaching out! I have received your request and will get back to you soon.
+      </p>
+      <p style="font-size: 18px;">
+        If you need to contact me directly, please feel free to call me at <strong>8107199052</strong>.
+      </p>
+      <p style="font-size: 18px;">Best regards,</p>
+      <p style="font-size: 18px; font-weight: bold;">Ravindra Choudhary</p>
+    </div>
+    <style>
+      @media only screen and (max-width: 600px) {
+        div {
+          padding: 15px;
+          font-size: 16px;
+        }
+        h1 {
+          font-size: 22px;
+        }
+        p {
+          font-size: 16px;
+        }
+      }
+    </style>
   `,
     });
 
