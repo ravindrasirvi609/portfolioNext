@@ -12,12 +12,15 @@ export async function POST(req: NextRequest) {
 
     await newUser.save();
     const apiKey = process.env.RESEND_API_KEY;
+    console.log("API KEY: ", apiKey);
+
     if (!apiKey) {
       throw new Error(
         "Missing Resend API key. Set the RESEND_API_KEY environment variable."
       );
     }
     const resend = new Resend(apiKey);
+    console.log(resend);
 
     resend.emails.send({
       from: "dev@ravindrachoudhary.in",
