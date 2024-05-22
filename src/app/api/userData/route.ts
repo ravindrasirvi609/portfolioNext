@@ -11,7 +11,13 @@ export async function POST(req: NextRequest) {
     const newUser = new userData(userDataFromBody);
 
     await newUser.save();
-    const resend = new Resend(process.env.RESEND_API_KEY!);
+    const apiKey = process.env.RESEND_API_KEY;
+    if (!apiKey) {
+      throw new Error(
+        "Missing Resend API key. Set the RESEND_API_KEY environment variable."
+      );
+    }
+    const resend = new Resend(apiKey);
 
     resend.emails.send({
       from: "dev@ravindrachoudhary.in",
