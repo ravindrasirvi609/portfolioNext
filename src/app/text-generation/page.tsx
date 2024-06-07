@@ -1,7 +1,7 @@
 "use client";
 import { PlaceholdersAndVanishInput } from "@/components/placeholders-and-vanish-input";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 
 const Gemini = () => {
   const placeholders = [
@@ -16,6 +16,13 @@ const Gemini = () => {
   const [output, setOutput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
+  const outputRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (outputRef.current) {
+      outputRef.current.scrollTop = outputRef.current.scrollHeight;
+    }
+  }, [output]);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     console.log(e.target.value);
@@ -64,7 +71,7 @@ const Gemini = () => {
         </Link>
       </div>
 
-      <div className="h-[40rem] flex flex-col justify-center items-center px-4">
+      <div className="flex flex-col justify-center items-center px-4">
         <h2 className="mb-10 sm:mb-20 text-xl text-center sm:text-5xl text-yellow-400">
           Ask AI Assistant Anything
         </h2>
@@ -80,15 +87,11 @@ const Gemini = () => {
           </div>
         )}
         <div
+          ref={outputRef}
           className="mt-8 text-white w-full text-center"
           style={{ whiteSpace: "pre-line" }}
-        >
-          <div
-            className="mt-8 text-white w-full text-center"
-            style={{ whiteSpace: "pre-line" }}
-            dangerouslySetInnerHTML={{ __html: processText(output) }}
-          ></div>
-        </div>
+          dangerouslySetInnerHTML={{ __html: processText(output) }}
+        ></div>
       </div>
     </div>
   );
