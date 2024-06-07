@@ -14,12 +14,17 @@ const Gemini = () => {
 
   const [input, setInput] = useState("");
   const [output, setOutput] = useState("");
-  const [isLoading, setIsLoading] = useState(false); // State for loader visibility
-  const [error, setError] = useState(""); // State for error message
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState("");
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     console.log(e.target.value);
     setInput(e.target.value);
+  };
+
+  const processText = (text: string) => {
+    const regex = /\*\*([^*]+)\*\*/g;
+    return text.replace(regex, "<b>$1</b>");
   };
 
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -78,7 +83,11 @@ const Gemini = () => {
           className="mt-8 text-white w-full text-center"
           style={{ whiteSpace: "pre-line" }}
         >
-          {output}
+          <div
+            className="mt-8 text-white w-full text-center"
+            style={{ whiteSpace: "pre-line" }}
+            dangerouslySetInnerHTML={{ __html: processText(output) }}
+          ></div>
         </div>
       </div>
     </div>
