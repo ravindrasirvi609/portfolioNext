@@ -13,16 +13,16 @@ const Experience: React.FC<ExperienceProps> = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <BackgroundGradient className="rounded-[22px] max-w-sm p-4 sm:p-10 bg-white dark:bg-zinc-900">
             <h3 className="text-2xl font-bold text-black dark:text-white">
-              Angular Developer
+              Software Developer
             </h3>
             <p className="text-gray-700 dark:text-neutral-300 mb-2">
               June 2023 - Present
             </p>
             <p className="text-gray-700 dark:text-neutral-300">
               <a href="#" className="underline">
-                Samcom
+                Operant Pharmacy Federation
               </a>{" "}
-              | Ahemdabad, India
+              | Mumbai, India
             </p>
           </BackgroundGradient>
           <BackgroundGradient className="rounded-[22px] max-w-sm p-4 sm:p-10 bg-white dark:bg-zinc-900">
